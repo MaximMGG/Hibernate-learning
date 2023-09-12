@@ -1,7 +1,5 @@
 package com.maxim.hibernate.entity;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -25,9 +23,9 @@ public class User {
     private String username;
     private String firstname;
     private String lastname;
+    // @Convert(converter = BirthdayConvertor.class)
     @Column(name = "birth_date")
-    private LocalDate birthDate;
-    private Integer age;
+    private Birthday birthDate;
     @Enumerated(EnumType.STRING)
     private Role role;
 

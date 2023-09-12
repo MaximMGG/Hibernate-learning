@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.Test;
 
+import com.maxim.hibernate.entity.Birthday;
 import com.maxim.hibernate.entity.User;
 
 import jakarta.persistence.Column;
@@ -25,8 +26,7 @@ public class HebertateRunnerTest {
                             .username("Poko123")
                             .firstname("Pok")
                             .lastname("Mok")
-                            .birthDate(LocalDate.of(1999, 11, 1))
-                            .age(14)
+                            .birthDate(new Birthday(LocalDate.of(1999, 11, 1)))
                             .build();
 
                             

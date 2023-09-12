@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.maxim.hibernate.converter.BirthdayConvertor;
+import com.maxim.hibernate.entity.Birthday;
 import com.maxim.hibernate.entity.Role;
 import com.maxim.hibernate.entity.User;
 
@@ -19,6 +21,7 @@ public class HibernateRunner {
         Configuration configuration = new Configuration();
         // configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
         // configuration.addAnnotatedClass(User.class);
+        configuration.addAttributeConverter(new BirthdayConvertor());
         configuration.configure();
 
         try (SessionFactory sessionFactory = configuration.buildSessionFactory()) {
@@ -26,12 +29,11 @@ public class HibernateRunner {
             session.beginTransaction();
 
             User user = User.builder()
-                            .username("Poko123")
-                            .firstname("Pok")
-                            .lastname("Mok")
-                            .birthDate(LocalDate.of(1999, 11, 1))
-                            .age(14)
-                            .role(Role.ADMIN)
+                            .username("Ubro1")
+                            .firstname("Mick")
+                            .lastname("Lubo")
+                            .birthDate(new Birthday(LocalDate.of(1979, 1, 11)))
+                            .role(Role.USER)
                             .build();
 
             session.persist(user);
