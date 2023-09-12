@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.maxim.hibernate.entity.Role;
 import com.maxim.hibernate.entity.User;
 
 public class HibernateRunner {
@@ -30,6 +31,7 @@ public class HibernateRunner {
                             .lastname("Mok")
                             .birthDate(LocalDate.of(1999, 11, 1))
                             .age(14)
+                            .role(Role.ADMIN)
                             .build();
 
             session.persist(user);
