@@ -1,0 +1,36 @@
+
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+java {
+    sourceCompatibility (JavaVersion.VERSION_19)
+    targetCompatibility (JavaVersion.VERSION_19)
+}
+
+group 'com.maxim.hibernate'
+version '1.0-SNAPSHOT'
+
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:6.2.5.Final'
+    runtimeOnly 'org.postgresql:postgresql:42.6.0'
+
+
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+	annotationProcessor 'org.projectlombok:lombok:1.18.28'
+	
+	testCompileOnly 'org.projectlombok:lombok:1.18.28'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
+}
+
+test {
+    useJUnitPlatform()
+}
