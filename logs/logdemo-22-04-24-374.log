@@ -1,0 +1,44 @@
+22:01.36.429 [main] INFO  com.maxim.hibernate.test.LogTest - infogs
+22:01.36.433 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:01.36.434 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:01.36.435 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:01.36.436 [main] INFO  com.maxim.hibernate.test.LogTest - infogs
+22:01.36.437 [main] INFO  com.maxim.hibernate.test.LogTest - infogs
+22:01.36.439 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:01.36.439 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 0gs
+22:01.36.439 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:01.36.439 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 1gs
+22:01.36.440 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 2gs
+22:01.36.440 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:01.36.441 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:01.36.441 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 3gs
+22:01.36.442 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:01.36.443 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:01.36.442 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 4gs
+22:01.36.453 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 5gs
+22:01.36.454 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 6gs
+22:01.36.454 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 7gs
+22:01.36.455 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 8gs
+22:01.36.455 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 9gs
+22:02.20.159 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 0gs
+22:02.20.148 [main] INFO  com.maxim.hibernate.test.LogTest - infogs
+22:02.20.166 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 1gs
+22:02.20.166 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:02.20.167 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 2gs
+22:02.20.167 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:02.20.167 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 3gs
+22:02.20.168 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:02.20.168 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 4gs
+22:02.20.168 [main] INFO  com.maxim.hibernate.test.LogTest - infogs
+22:02.20.168 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 5gs
+22:02.20.168 [main] INFO  com.maxim.hibernate.test.LogTest - infogs
+22:02.20.169 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 6gs
+22:02.20.169 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:02.20.169 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 7gs
+22:02.20.170 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 8gs
+22:02.20.170 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:02.20.172 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 9gs
+22:02.20.173 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:02.20.173 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:02.20.174 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:02.20.175 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs

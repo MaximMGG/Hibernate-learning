@@ -28,8 +28,6 @@ public class LogTest {
        log.debug("debug");
        log.error("Error");
        log.fatal("fatal");
-
-
     }
 
     public static void doWork() {

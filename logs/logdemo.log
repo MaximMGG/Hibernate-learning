@@ -1,0 +1,8 @@
+22:05.36.960 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:05.36.960 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 5gs
+22:05.36.968 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:05.36.968 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 6gs
+22:05.36.969 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:05.36.969 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 7gs
+22:05.36.969 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 8gs
+22:05.36.970 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 9gs
