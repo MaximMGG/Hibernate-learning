@@ -2,6 +2,8 @@ package com.maxim.hibernate;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -22,6 +24,7 @@ public class HibernateRunner {
         // configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
         // configuration.addAnnotatedClass(User.class);
         configuration.addAttributeConverter(new BirthdayConvertor());
+        // configuration.registerTypeOverride(new JsonBinaryType());   do not work for version 6
         configuration.configure();
 
         try (SessionFactory sessionFactory = configuration.buildSessionFactory()) {
@@ -29,16 +32,26 @@ public class HibernateRunner {
             session.beginTransaction();
 
             User user = User.builder()
-                            .username("Ubro1")
+                            .username("Ubro3")
                             .firstname("Mick")
                             .lastname("Lubo")
                             .birthDate(new Birthday(LocalDate.of(1979, 1, 11)))
                             .role(Role.USER)
+                            .info(getJson())
                             .build();
 
             session.persist(user);
             session.getTransaction().commit();
         }
         
+    }
+
+
+    public static Map<String, String> getJson() {
+
+        Map<String, String> json = new HashMap<>();
+        json.put("name", "John");
+        json.put("id", "25");
+        return json;
     }
 }

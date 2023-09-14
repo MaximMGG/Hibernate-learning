@@ -1,4 +1,8 @@
 package com.maxim.hibernate.entity;
+import java.util.Map;
+
+import org.hibernate.annotations.JdbcTypeCode;
+import org.hibernate.type.SqlTypes;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,5 +32,8 @@ public class User {
     private Birthday birthDate;
     @Enumerated(EnumType.STRING)
     private Role role;
-
+    // @Convert(converter = com.vladmihalcea.hibernate.type.json.JsonBinaryType.class)
+    // @Type(JsonBinaryType.class)
+    @JdbcTypeCode(SqlTypes.JSON)
+    private Map<String, String> info;
 }

@@ -16,17 +16,28 @@ version '1.0-SNAPSHOT'
 
 
 dependencies {
+    //logging (slf4j)
+    implementation 'org.slf4j:slf4j-api:2.0.7'
+
+    //hibernate
     implementation 'org.hibernate:hibernate-core:6.2.5.Final'
+    // implementation 'com.vladmihalcea:hibernate-types-52:2.20.0'
+    // implementation 'io.hypersistence:hypersistence-utils-hibernate-62:3.5.2'
+    //json
+    implementation 'com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:2.15.2'
+
+    //postgress driver
     runtimeOnly 'org.postgresql:postgresql:42.6.0'
 
 
-
+    //Junit 5
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
+    //lombok
     compileOnly 'org.projectlombok:lombok:1.18.28'
 	annotationProcessor 'org.projectlombok:lombok:1.18.28'
-	
+    //lombok test
 	testCompileOnly 'org.projectlombok:lombok:1.18.28'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.28'
 }
