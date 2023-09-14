@@ -1,60 +1,46 @@
 package com.maxim.hibernate;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
-import com.maxim.hibernate.converter.BirthdayConvertor;
-import com.maxim.hibernate.entity.Birthday;
-import com.maxim.hibernate.entity.Role;
 import com.maxim.hibernate.entity.User;
+import com.maxim.hibernate.util.HibernateUtils;
 
 public class HibernateRunner {
     public static void main(String[] args) throws SQLException {
-        // BlockingDeque<Connection> pool = null;
-        // SessionFactory
-        // Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5433/postgres", "postgres", "pass");
-        // Session
-        Configuration configuration = new Configuration();
-        // configuration.setPhysicalNamingStrategy(new CamelCaseToUnderscoresNamingStrategy());
-        // configuration.addAnnotatedClass(User.class);
-        configuration.addAttributeConverter(new BirthdayConvertor());
-        // configuration.registerTypeOverride(new JsonBinaryType());   do not work for version 6
-        configuration.configure();
+        User user = User.builder()
+                        .username("Piter@gmail.com")
+                        .lastname("Bobson")
+                        .firstname("Piter")
+                        .build();
 
-        try (SessionFactory sessionFactory = configuration.buildSessionFactory()) {
-            Session session = sessionFactory.openSession();
-            session.beginTransaction();
+        try (SessionFactory sessionFactory = HibernateUtils.buildSessionFactory()) {
+            try (Session session1 = sessionFactory.openSession()) {
+                session1.beginTransaction();
 
-            User user = User.builder()
-                            .username("Ubro10")
-                            .firstname("Mick")
-                            .lastname("Lubo")
-                            .birthDate(new Birthday(LocalDate.of(1979, 1, 11)))
-                            .role(Role.USER)
-                            // .info(getJson())
-                            .info("""
-                                {
-                                    "name": "John",
-                                    "id": 25
-                                }
-                                    """)
-                            .build();
+                session1.merge(user);
 
-            // session.persist(user);
-            // session.merge(user);
-            // session.remove(user);
-            User user2 = session.get(User.class, "Ubro9");
-            System.out.println(user2);
-            session.getTransaction().commit();
+                session1.getTransaction().commit();
+            }
+
+            try (Session session2 = sessionFactory.openSession()) {
+                session2.beginTransaction();
+
+                user.setFirstname("Paul");
+                // session2.remove(user);
+
+                session2.refresh(user);
+
+                session2.getTransaction().commit();
+            }
         }
         
     }
+
 
 
     public static Map<String, String> getJson() {
