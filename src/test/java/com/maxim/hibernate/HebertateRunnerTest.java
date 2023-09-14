@@ -1,8 +1,13 @@
 package com.maxim.hibernate;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -18,9 +23,26 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Table;
 
 public class HebertateRunnerTest {
+
+    @Test
+    void checkGetReflectionApi() throws SQLException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{
+        PreparedStatement ps = null;
+        ResultSet resultSet = ps.executeQuery();
+        resultSet.getString("username");
+        resultSet.getString("lastname");
+
+        Class<User> clazz = User.class;
+        Constructor<User> constructor = clazz.getConstructor();
+        User user = constructor.newInstance();
+        Field[] declaredFields = clazz.getDeclaredFields();
+        for (Field field : declaredFields) {
+            field.setAccessible(true);
+            field.set(user, resultSet.getString("username"));
+        }
+    }
     
     @Test
-    void checkRflectionAip() throws SQLException, IllegalArgumentException, IllegalAccessException {
+    void checkInsertReflectionApi() throws SQLException, IllegalArgumentException, IllegalAccessException {
 
         User user = User.builder()
                             .username("Poko123")

@@ -22,7 +22,7 @@ dependencies {
     //hibernate
     implementation 'org.hibernate:hibernate-core:6.2.5.Final'
     // implementation 'com.vladmihalcea:hibernate-types-52:2.20.0'
-    // implementation 'io.hypersistence:hypersistence-utils-hibernate-62:3.5.2'
+    implementation 'io.hypersistence:hypersistence-utils-hibernate-62:3.5.2'
     //json
     implementation 'com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations:2.15.2'
 

@@ -1,9 +1,7 @@
 package com.maxim.hibernate.entity;
-import java.util.Map;
+import org.hibernate.annotations.Type;
 
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
-
+import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 
 @Data
 @NoArgsConstructor
@@ -34,6 +33,8 @@ public class User {
     private Role role;
     // @Convert(converter = com.vladmihalcea.hibernate.type.json.JsonBinaryType.class)
     // @Type(JsonBinaryType.class)
-    @JdbcTypeCode(SqlTypes.JSON)
-    private Map<String, String> info;
+    // @JdbcTypeCode(SqlTypes.JSON)
+    // private Map<String, String> info;
+    @Type(JsonBinaryType.class)
+    private String info;
 }

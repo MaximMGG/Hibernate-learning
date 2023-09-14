@@ -32,15 +32,25 @@ public class HibernateRunner {
             session.beginTransaction();
 
             User user = User.builder()
-                            .username("Ubro3")
+                            .username("Ubro10")
                             .firstname("Mick")
                             .lastname("Lubo")
                             .birthDate(new Birthday(LocalDate.of(1979, 1, 11)))
                             .role(Role.USER)
-                            .info(getJson())
+                            // .info(getJson())
+                            .info("""
+                                {
+                                    "name": "John",
+                                    "id": 25
+                                }
+                                    """)
                             .build();
 
-            session.persist(user);
+            // session.persist(user);
+            // session.merge(user);
+            // session.remove(user);
+            User user2 = session.get(User.class, "Ubro9");
+            System.out.println(user2);
             session.getTransaction().commit();
         }
         
