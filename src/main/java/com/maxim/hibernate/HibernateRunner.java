@@ -4,18 +4,19 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import com.maxim.hibernate.entity.User;
 import com.maxim.hibernate.util.HibernateUtils;
 
 public class HibernateRunner {
 
-    private static final Logger logger = LoggerFactory.getLogger(HibernateRunner.class);
+    // private static Logger log = LogManager.getLogger(HibernateRunner.class.getName());
+    private static final Logger logger = LogManager.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
         User user = User.builder()
                         .username("Piter@gmail.com")
