@@ -9,11 +9,36 @@ public class LogTest {
 
     public static void main(String[] args) {
        System.out.println("This is popop");
+       doWork();
        log.info("info");
        log.trace("trace");
        log.warn("warn");
        log.debug("debug");
        log.error("Error");
        log.fatal("fatal");
+       log.info("info");
+       log.info("info");
+       log.trace("trace");
+       log.warn("warn");
+       log.debug("debug");
+       log.error("Error");
+       log.fatal("fatal");
+       log.trace("trace");
+       log.warn("warn");
+       log.debug("debug");
+       log.error("Error");
+       log.fatal("fatal");
+
+
+    }
+
+    public static void doWork() {
+        Thread t1 = new Thread(() -> {
+            for (int i = 0; i < 10; i++) {
+               log.info("Hello {}", i);
+            }
+        });
+
+        t1.start();
     }
 }

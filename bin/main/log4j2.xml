@@ -6,7 +6,10 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Root level="info">
+        <Logger name="com.maxim.hibernate.test" level="info" additivity="false">
+            <AppenderRef ref ="Console"/>
+        </Logger>
+        <Root level="fatal">
             <AppenderRef ref ="Console"/>
         </Root>
     </Loggers>
