@@ -1,30 +1,15 @@
-22:10.38.559 [main] WARN  com.maxim.hibernate.HibernateRunner - User is in detached state: User(username=Piter@gmail.com, firstname=Piter, lastname=Bobson, birthDate=null, role=null, info=null), session is closed SessionImpl(1414953733<closed>)gs
-22:10.38.564 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
-10:50.24.486 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(username=Piter@gmail.com, personalInfo=PersonalInfo(firstname=Poul, lastname=Lorenso, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null)gs
-10:50.24.620 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
-10:50.24.625 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
-10:50.25.287 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
-10:50.25.293 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
-10:50.25.294 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
-10:50.25.295 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
-10:50.25.296 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
-10:50.25.301 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
-10:50.25.691 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
-10:50.26.337 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
-10:50.27.432 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
-10:50.27.661 [main] WARN  com.maxim.hibernate.HibernateRunner - User is in detached state: User(username=Piter@gmail.com, personalInfo=PersonalInfo(firstname=Poul, lastname=Lorenso, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null), session is closed SessionImpl(165255249<closed>)gs
-10:50.27.664 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
-10:50.45.088 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(username=Poul@gmail.com, personalInfo=PersonalInfo(firstname=Poul, lastname=Lorenso, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null)gs
-10:50.45.199 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
-10:50.45.202 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
-10:50.45.788 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
-10:50.45.794 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
-10:50.45.795 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
-10:50.45.795 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
-10:50.45.796 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
-10:50.45.800 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
-10:50.46.122 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
-10:50.46.672 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
-10:50.47.658 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
-10:50.47.873 [main] WARN  com.maxim.hibernate.HibernateRunner - User is in detached state: User(username=Poul@gmail.com, personalInfo=PersonalInfo(firstname=Poul, lastname=Lorenso, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null), session is closed SessionImpl(594043354<closed>)gs
-10:50.47.875 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+12:10.39.891 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(id=null, username=Misha@gmail.com, personalInfo=PersonalInfo(firstname=Mick, lastname=Popoko, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null)gs
+12:10.40.009 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+12:10.40.012 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+12:10.40.615 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+12:10.40.622 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+12:10.40.639 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+12:10.40.640 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+12:10.40.641 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+12:10.40.650 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+12:10.41.046 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+12:10.41.771 [main] INFO  org.hibernate.id.enhanced.TableGenerator - HHH000398: Explicit segment value for id generator [all_sequence.table_name] suggested; using default [users]gs
+12:10.41.803 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+12:10.42.785 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+12:10.43.009 [main] WARN  com.maxim.hibernate.HibernateRunner - User is in detached state: User(id=null, username=Misha@gmail.com, personalInfo=PersonalInfo(firstname=Mick, lastname=Popoko, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null), session is closed SessionImpl(74259289<closed>)gs
+12:10.43.011 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
