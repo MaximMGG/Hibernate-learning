@@ -2,7 +2,7 @@ package com.maxim.hibernate.entity;
 import org.hibernate.annotations.Type;
 
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
-import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -24,11 +24,10 @@ public class User {
 
     @Id
     private String username;
-    private String firstname;
-    private String lastname;
-    // @Convert(converter = BirthdayConvertor.class)
-    @Column(name = "birth_date")
-    private Birthday birthDate;
+
+    @Embedded
+    private PersonalInfo personalInfo;
+
     @Enumerated(EnumType.STRING)
     private Role role;
     // @Convert(converter = com.vladmihalcea.hibernate.type.json.JsonBinaryType.class)

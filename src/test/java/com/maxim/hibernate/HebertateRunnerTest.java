@@ -4,8 +4,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -17,6 +15,7 @@ import java.util.stream.Collectors;
 import org.junit.jupiter.api.Test;
 
 import com.maxim.hibernate.entity.Birthday;
+import com.maxim.hibernate.entity.PersonalInfo;
 import com.maxim.hibernate.entity.User;
 
 import jakarta.persistence.Column;
@@ -46,9 +45,11 @@ public class HebertateRunnerTest {
 
         User user = User.builder()
                             .username("Poko123")
-                            .firstname("Pok")
-                            .lastname("Mok")
-                            .birthDate(new Birthday(LocalDate.of(1999, 11, 1)))
+                            .personalInfo(PersonalInfo.builder()
+                                                    .firstname("Poko")
+                                                    .lastname("Mizo")
+                                                    .birthDate(new Birthday(LocalDate.of(1242,12, 1)))
+                                                    .build())
                             .build();
 
                             

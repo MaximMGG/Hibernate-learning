@@ -1,0 +1,12 @@
+22:05.36.960 [main] WARN  com.maxim.hibernate.test.LogTest - warngs
+22:05.36.960 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 5gs
+22:05.36.968 [main] ERROR com.maxim.hibernate.test.LogTest - Errorgs
+22:05.36.968 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 6gs
+22:05.36.969 [main] FATAL com.maxim.hibernate.test.LogTest - fatalgs
+22:05.36.969 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 7gs
+22:05.36.969 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 8gs
+22:05.36.970 [Thread-0] INFO  com.maxim.hibernate.test.LogTest - Hello 9gs
+22:10.35.400 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(username=Piter@gmail.com, firstname=Piter, lastname=Bobson, birthDate=null, role=null, info=null)gs
+22:10.35.537 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+22:10.35.541 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+22:10.36.146 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs

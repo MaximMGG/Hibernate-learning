@@ -10,7 +10,7 @@
         <PatternLayout>
             <pattern>%d{HH:mm.ss.SSS} [%t] %-5level %logger{36} - %mgs%n</pattern>
         </PatternLayout>
-        <SizeBasedTriggeringPolicy size="1 KB"/>
+        <SizeBasedTriggeringPolicy size="10 KB"/>
     </RollingFile>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm.ss.SSS} [%t] %-5level %logger{36} - %mgs%n"/>
@@ -21,8 +21,9 @@
             <AppenderRef ref ="Console"/>
             <AppenderRef ref ="file"/>
         </Logger>
-        <Root level="fatal">
+        <Root level="info">
             <AppenderRef ref ="Console"/>
+            <AppenderRef ref ="file"/>
         </Root>
     </Loggers>
 </Configuration>

@@ -1,6 +1,7 @@
 package com.maxim.hibernate;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,6 +11,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import com.maxim.hibernate.entity.Birthday;
+import com.maxim.hibernate.entity.PersonalInfo;
 import com.maxim.hibernate.entity.User;
 import com.maxim.hibernate.util.HibernateUtils;
 
@@ -19,9 +22,12 @@ public class HibernateRunner {
     private static final Logger logger = LogManager.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
         User user = User.builder()
-                        .username("Piter@gmail.com")
-                        .lastname("Bobson")
-                        .firstname("Piter")
+                        .username("Poul@gmail.com")
+                        .personalInfo(PersonalInfo.builder()
+                                                    .firstname("Poul")
+                                                    .lastname("Lorenso")
+                                                    .birthDate(new Birthday(LocalDate.of(1994, 11, 4)))
+                                                    .build())
                         .build();
         logger.info("user entity is in transient state, object: {}", user);
 
