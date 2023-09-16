@@ -22,10 +22,10 @@ public class HibernateRunner {
     private static final Logger logger = LogManager.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
         User user = User.builder()
-                        .username("Misha@gmail.com")
+                        .username("Mishan@gmail.com")
                         .personalInfo(PersonalInfo.builder()
-                                                    .firstname("Mick")
-                                                    .lastname("Popoko")
+                                                    .firstname("Micka")
+                                                    .lastname("Popokao")
                                                     .birthDate(new Birthday(LocalDate.of(1994, 11, 4)))
                                                     .build())
                         .build();
@@ -49,8 +49,8 @@ public class HibernateRunner {
                                                     .lastname("Popoko")
                                                     .birthDate(new Birthday(LocalDate.of(1994, 11, 4)))
                                                     .build();
-                User user2 = session.get(User.class, key);
-                System.out.println(user2);
+                // User user2 = session.get(User.class, key);
+                // System.out.println(user2);
             }
         } catch (Exception e) {
             logger.error("Exception occurred", e);

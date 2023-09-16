@@ -2,6 +2,8 @@ package com.maxim.hibernate.entity;
 import org.hibernate.annotations.Type;
 
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
+import jakarta.persistence.Access;
+import jakarta.persistence.AccessType;
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
@@ -20,13 +22,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @Entity
 @Table(name = "users", schema = "public")
+@Access(value = AccessType.FIELD)
 public class User {
-
-    @Column(unique = true)
-    private String username;
-
+    
     @EmbeddedId
     private PersonalInfo personalInfo;
+
+    // @ColumnTransformer(write="encrypt(?)", read="decrypt(username)")
+    @Column(unique = true, name = "username")
+    private String username;
+
 
     @Enumerated(EnumType.STRING)
     private Role role;
