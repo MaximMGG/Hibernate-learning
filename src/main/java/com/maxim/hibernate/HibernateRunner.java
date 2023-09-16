@@ -19,14 +19,14 @@ public class HibernateRunner {
     // private static final Logger logger = LogManager.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
         Company company = Company.builder()
-                                .name("Bobo")
+                                .name("Amazon")
                                 .build();
         User user = User.builder()
-                        .username("Mishan@gmail.com")
+                        .username("John@gmail.com")
                         .personalInfo(PersonalInfo.builder()
-                                                    .firstname("Micka")
-                                                    .lastname("Popokao")
-                                                    .birthDate(new Birthday(LocalDate.of(1994, 11, 4)))
+                                                    .firstname("John")
+                                                    .lastname("Bolt")
+                                                    .birthDate(new Birthday(LocalDate.of(1988, 10, 1)))
                                                     .build())
                         .company(company)
                         .build();
@@ -36,9 +36,7 @@ public class HibernateRunner {
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
 
-                User user2 = session1.get(User.class, 7L);
-                Company company2 = user2.getCompany();
-                company2.getName();
+                session1.merge(user);
 
                 transaction.commit();
             }

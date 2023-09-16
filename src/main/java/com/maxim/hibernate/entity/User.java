@@ -48,8 +48,7 @@ public class User {
     @Type(JsonBinaryType.class)
     private String info;
 
-    @ManyToOne(cascade = CascadeType.ALL
-                ,optional = false
+    @ManyToOne(cascade = {CascadeType.ALL}
                 ,fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id") // company_id
     private Company company;
