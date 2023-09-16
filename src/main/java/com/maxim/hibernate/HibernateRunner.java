@@ -28,7 +28,7 @@ public class HibernateRunner {
                                                     .lastname("Popokao")
                                                     .birthDate(new Birthday(LocalDate.of(1994, 11, 4)))
                                                     .build())
-                        .companyId(company)
+                        .company(company)
                         .build();
 
         try (SessionFactory sessionFactory = HibernateUtils.buildSessionFactory()) {
@@ -36,7 +36,9 @@ public class HibernateRunner {
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
 
-                System.out.println(session1.get(User.class, 7L));
+                User user2 = session1.get(User.class, 7L);
+                Company company2 = user2.getCompany();
+                company2.getName();
 
                 transaction.commit();
             }

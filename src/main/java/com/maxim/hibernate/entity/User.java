@@ -52,5 +52,5 @@ public class User {
                 ,optional = false
                 ,fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id") // company_id
-    private Company companyId;
+    private Company company;
 }
