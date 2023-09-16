@@ -5,10 +5,14 @@ import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.Access;
 import jakarta.persistence.AccessType;
 import jakarta.persistence.Column;
-import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,7 +29,10 @@ import lombok.NoArgsConstructor;
 @Access(value = AccessType.FIELD)
 public class User {
     
-    @EmbeddedId
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private PersonalInfo personalInfo;
 
     // @ColumnTransformer(write="encrypt(?)", read="decrypt(username)")
@@ -38,4 +45,8 @@ public class User {
     
     @Type(JsonBinaryType.class)
     private String info;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id") // company_id
+    private Company companyId;
 }

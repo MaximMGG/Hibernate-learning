@@ -13,5 +13,6 @@
         <property name="format_sql">true</property>
 
         <mapping class="com.maxim.hibernate.entity.User"/>
+        <mapping class="com.maxim.hibernate.entity.Company"/>
     </session-factory>
 </hibernate-configuration>
