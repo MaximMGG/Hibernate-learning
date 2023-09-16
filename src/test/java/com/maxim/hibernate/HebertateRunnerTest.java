@@ -1,5 +1,7 @@
 package com.maxim.hibernate;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -12,14 +14,19 @@ import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
 
 import com.maxim.hibernate.entity.Birthday;
+import com.maxim.hibernate.entity.Company;
 import com.maxim.hibernate.entity.PersonalInfo;
 import com.maxim.hibernate.entity.User;
+import com.maxim.hibernate.util.HibernateUtils;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Table;
+import lombok.Cleanup;
 
 public class HebertateRunnerTest {
 
@@ -83,6 +90,20 @@ public class HebertateRunnerTest {
             field.setAccessible(true);
             prepareStatement.setObject(1, field.get(user));
         }
+    }
+
+    @Test
+    void oneToMany() {
+        @Cleanup SessionFactory sessionFactory = HibernateUtils.buildSessionFactory();
+        @Cleanup Session session = sessionFactory.openSession();
+        session.beginTransaction();
+
+        Company company = session.get(Company.class, 14);
+        assertTrue(company.getId() == 14);
+
+        System.out.println(company);
+
+        session.getTransaction().commit();
     }
 }
 

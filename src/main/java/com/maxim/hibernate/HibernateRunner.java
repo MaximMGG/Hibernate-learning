@@ -22,19 +22,21 @@ public class HibernateRunner {
                                 .name("Amazon")
                                 .build();
         User user = User.builder()
-                        .username("John@gmail.com")
+                        .username("Bil@gmail.com")
                         .personalInfo(PersonalInfo.builder()
-                                                    .firstname("John")
-                                                    .lastname("Bolt")
+                                                    .firstname("Bil")
+                                                    .lastname("Carry")
                                                     .birthDate(new Birthday(LocalDate.of(1988, 10, 1)))
                                                     .build())
-                        .company(company)
                         .build();
 
         try (SessionFactory sessionFactory = HibernateUtils.buildSessionFactory()) {
             Session session1 = sessionFactory.openSession();
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
+
+                Company c = session1.get(Company.class, 14);
+                user.setCompany(c);
 
                 session1.merge(user);
 
