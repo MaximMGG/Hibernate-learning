@@ -4,10 +4,12 @@ import org.hibernate.annotations.Type;
 import io.hypersistence.utils.hibernate.type.json.JsonBinaryType;
 import jakarta.persistence.Access;
 import jakarta.persistence.AccessType;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -46,7 +48,9 @@ public class User {
     @Type(JsonBinaryType.class)
     private String info;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL
+                ,optional = false
+                ,fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id") // company_id
     private Company companyId;
 }

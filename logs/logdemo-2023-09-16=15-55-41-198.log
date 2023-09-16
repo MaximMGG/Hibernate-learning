@@ -1,0 +1,736 @@
+12:41.58.198 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(username=Misha@gmail.com, personalInfo=PersonalInfo(firstname=Mick, lastname=Popoko, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null)gs
+12:41.58.328 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+12:41.58.331 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+12:41.59.010 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+12:41.59.015 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+12:41.59.016 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+12:41.59.017 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+12:41.59.017 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+12:41.59.022 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+12:41.59.347 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+12:42.00.020 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+12:42.01.030 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+12:42.01.253 [main] WARN  com.maxim.hibernate.HibernateRunner - User is in detached state: User(username=Misha@gmail.com, personalInfo=PersonalInfo(firstname=Mick, lastname=Popoko, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null), session is closed SessionImpl(347691330<closed>)gs
+12:42.01.269 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+13:32.54.864 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(username=Mishan@gmail.com, personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null)gs
+13:32.55.005 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+13:32.55.009 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+13:32.55.655 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+13:32.55.661 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+13:32.55.662 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+13:32.55.663 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+13:32.55.663 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+13:32.55.668 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+13:32.55.989 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+13:32.56.264 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+13:32.56.268 [main] ERROR com.maxim.hibernate.HibernateRunner - Exception occurredgs
+org.hibernate.AnnotationException: Entity 'com.maxim.hibernate.entity.User' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:235) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:293) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:228) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:417) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:255) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:275) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:318) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:125) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:451) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:102) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.util.HibernateUtils.buildSessionFactory(HibernateUtils.java:22) ~[main/:?]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:34) [main/:?]
+13:33.47.235 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(username=Mishan@gmail.com, personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), role=null, info=null)gs
+13:33.47.386 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+13:33.47.392 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+13:33.47.992 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+13:33.47.998 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+13:33.47.999 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+13:33.48.000 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+13:33.48.000 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+13:33.48.006 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+13:33.48.284 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+13:33.48.540 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+13:33.48.545 [main] ERROR com.maxim.hibernate.HibernateRunner - Exception occurredgs
+org.hibernate.AnnotationException: Entity 'com.maxim.hibernate.entity.User' has no identifier (every '@Entity' class must declare or inherit at least one '@Id' or '@EmbeddedId' property)
+	at org.hibernate.boot.model.internal.InheritanceState.getElementsToProcess(InheritanceState.java:235) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.InheritanceState.postProcess(InheritanceState.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.handleIdentifier(EntityBinder.java:293) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.EntityBinder.bindEntityClass(EntityBinder.java:228) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.internal.AnnotationBinder.bindClass(AnnotationBinder.java:417) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:255) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:275) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:318) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:125) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:451) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:102) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.util.HibernateUtils.buildSessionFactory(HibernateUtils.java:22) ~[main/:?]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:34) [main/:?]
+13:34.43.298 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), username=Mishan@gmail.com, role=null, info=null)gs
+13:34.43.407 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+13:34.43.412 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+13:34.44.119 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+13:34.44.125 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+13:34.44.125 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+13:34.44.126 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+13:34.44.126 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+13:34.44.130 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+13:34.44.461 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+13:34.45.066 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+13:34.46.023 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+13:34.46.169 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42883gs
+13:34.46.170 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: function decript(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73gs
+13:34.46.174 [main] INFO  org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load commandgs
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.birth_date,u1_0.firstname,u1_0.lastname,u1_0.info,u1_0.role,decript(u1_0.username) from public.users u1_0 where (u1_0.birth_date,u1_0.firstname,u1_0.lastname) in ((?,?,?))] [ERROR: function decript(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:257) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:254) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:134) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:184) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:146) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:118) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:73) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3481) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3471) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:581) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:567) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:536) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:529) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:202) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:282) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:237) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:106) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:78) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1219) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:194) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:107) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.lambda$entityIsDetached$0(DefaultMergeEventListener.java:334) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.spi.LoadQueryInfluencers.fromInternalFetchProfile(LoadQueryInfluencers.java:79) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:332) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:149) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:142) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:126) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:80) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:848) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:834) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:40) [main/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: function decript(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:239) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 44 more
+13:34.46.209 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+13:34.46.213 [main] ERROR com.maxim.hibernate.HibernateRunner - Exception occurredgs
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.birth_date,u1_0.firstname,u1_0.lastname,u1_0.info,u1_0.role,decript(u1_0.username) from public.users u1_0 where (u1_0.birth_date,u1_0.firstname,u1_0.lastname) in ((?,?,?))] [ERROR: function decript(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:257) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:254) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:134) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:184) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:146) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:118) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:73) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3481) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3471) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:581) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:567) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:536) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:529) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:202) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:282) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:237) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:106) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:78) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1219) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:194) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:107) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.lambda$entityIsDetached$0(DefaultMergeEventListener.java:334) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.spi.LoadQueryInfluencers.fromInternalFetchProfile(LoadQueryInfluencers.java:79) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:332) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:149) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:142) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:126) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:80) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:848) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:834) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:40) [main/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: function decript(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:239) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 44 more
+13:35.29.525 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), username=Mishan@gmail.com, role=null, info=null)gs
+13:35.29.657 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+13:35.29.660 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+13:35.30.251 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+13:35.30.258 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+13:35.30.258 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+13:35.30.259 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+13:35.30.259 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+13:35.30.264 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+13:35.30.589 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+13:35.31.244 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+13:35.32.216 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+13:35.32.358 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42883gs
+13:35.32.359 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73gs
+13:35.32.362 [main] INFO  org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load commandgs
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.birth_date,u1_0.firstname,u1_0.lastname,u1_0.info,u1_0.role,decrypt(u1_0.username) from public.users u1_0 where (u1_0.birth_date,u1_0.firstname,u1_0.lastname) in ((?,?,?))] [ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:257) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:254) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:134) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:184) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:146) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:118) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:73) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3481) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3471) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:581) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:567) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:536) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:529) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:202) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:282) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:237) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:106) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:78) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1219) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:194) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:107) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.lambda$entityIsDetached$0(DefaultMergeEventListener.java:334) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.spi.LoadQueryInfluencers.fromInternalFetchProfile(LoadQueryInfluencers.java:79) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:332) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:149) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:142) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:126) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:80) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:848) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:834) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:40) [main/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:239) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 44 more
+13:35.32.393 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+13:35.32.396 [main] ERROR com.maxim.hibernate.HibernateRunner - Exception occurredgs
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.birth_date,u1_0.firstname,u1_0.lastname,u1_0.info,u1_0.role,decrypt(u1_0.username) from public.users u1_0 where (u1_0.birth_date,u1_0.firstname,u1_0.lastname) in ((?,?,?))] [ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:257) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:254) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:134) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:184) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:146) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:118) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:73) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3481) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3471) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:581) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:567) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:536) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:529) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:202) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:282) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:237) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:106) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:78) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1219) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:194) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:107) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.lambda$entityIsDetached$0(DefaultMergeEventListener.java:334) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.spi.LoadQueryInfluencers.fromInternalFetchProfile(LoadQueryInfluencers.java:79) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:332) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:149) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:142) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:126) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:80) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:848) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:834) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:40) [main/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:239) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 44 more
+13:36.46.315 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), username=Mishan@gmail.com, role=null, info=null)gs
+13:36.46.434 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+13:36.46.438 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+13:36.47.011 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+13:36.47.016 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+13:36.47.017 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+13:36.47.018 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+13:36.47.018 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+13:36.47.024 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+13:36.47.325 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+13:36.47.922 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+13:36.48.874 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+13:36.49.044 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42883gs
+13:36.49.045 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73gs
+13:36.49.049 [main] INFO  org.hibernate.event.internal.DefaultLoadEventListener - HHH000327: Error performing load commandgs
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.birth_date,u1_0.firstname,u1_0.lastname,u1_0.info,u1_0.role,decrypt(u1_0.username) from public.users u1_0 where (u1_0.birth_date,u1_0.firstname,u1_0.lastname) in ((?,?,?))] [ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:257) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:254) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:134) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:184) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:146) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:118) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:73) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3481) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3471) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:581) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:567) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:536) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:529) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:202) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:282) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:237) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:106) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:78) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1219) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:194) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:107) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.lambda$entityIsDetached$0(DefaultMergeEventListener.java:334) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.spi.LoadQueryInfluencers.fromInternalFetchProfile(LoadQueryInfluencers.java:79) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:332) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:149) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:142) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:126) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:80) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:848) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:834) [hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:40) [main/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:239) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 44 more
+13:36.49.078 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+13:36.49.081 [main] ERROR com.maxim.hibernate.HibernateRunner - Exception occurredgs
+org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [select u1_0.birth_date,u1_0.firstname,u1_0.lastname,u1_0.info,u1_0.role,decrypt(u1_0.username) from public.users u1_0 where (u1_0.birth_date,u1_0.firstname,u1_0.lastname) in ((?,?,?))] [ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:89) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:56) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:257) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:163) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.advanceNext(JdbcValuesResultSetImpl.java:254) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.processNext(JdbcValuesResultSetImpl.java:134) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractJdbcValues.next(AbstractJdbcValues.java:19) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.internal.RowProcessingStateStandardImpl.next(RowProcessingStateStandardImpl.java:66) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:184) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.results.spi.ListResultsConsumer.consume(ListResultsConsumer.java:33) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:361) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:168) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.list(JdbcSelectExecutorStandardImpl.java:93) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:31) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:146) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdLoadPlan.load(SingleIdLoadPlan.java:118) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.ast.internal.SingleIdEntityLoaderStandardImpl.load(SingleIdEntityLoaderStandardImpl.java:73) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.doLoad(AbstractEntityPersister.java:3481) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.persister.entity.AbstractEntityPersister.load(AbstractEntityPersister.java:3471) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromDatasource(DefaultLoadEventListener.java:581) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadFromCacheOrDatasource(DefaultLoadEventListener.java:567) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:536) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doLoad(DefaultLoadEventListener.java:529) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.load(DefaultLoadEventListener.java:202) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.loadWithRegularProxy(DefaultLoadEventListener.java:282) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.proxyOrLoad(DefaultLoadEventListener.java:237) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.doOnLoad(DefaultLoadEventListener.java:106) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:78) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:138) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoadNoChecks(SessionImpl.java:1231) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireLoad(SessionImpl.java:1219) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.doLoad(IdentifierLoadAccessImpl.java:194) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.lambda$load$1(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.perform(IdentifierLoadAccessImpl.java:107) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.loader.internal.IdentifierLoadAccessImpl.load(IdentifierLoadAccessImpl.java:160) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.get(SessionImpl.java:1024) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.lambda$entityIsDetached$0(DefaultMergeEventListener.java:334) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.engine.spi.LoadQueryInfluencers.fromInternalFetchProfile(LoadQueryInfluencers.java:79) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.entityIsDetached(DefaultMergeEventListener.java:332) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.merge(DefaultMergeEventListener.java:149) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.doMerge(DefaultMergeEventListener.java:142) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:126) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.internal.DefaultMergeEventListener.onMerge(DefaultMergeEventListener.java:80) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.fireMerge(SessionImpl.java:848) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at org.hibernate.internal.SessionImpl.merge(SessionImpl.java:834) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	at com.maxim.hibernate.HibernateRunner.main(HibernateRunner.java:40) [main/:?]
+Caused by: org.postgresql.util.PSQLException: ERROR: function decrypt(character varying) does not exist
+  Подсказка: No function matches the given name and argument types. You might need to add explicit type casts.
+  Позиция: 73
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2713) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2401) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:368) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:498) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:415) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:190) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:134) ~[postgresql-42.6.0.jar:42.6.0]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:239) ~[hibernate-core-6.2.5.Final.jar:6.2.5.Final]
+	... 44 more
+13:38.58.705 [main] INFO  com.maxim.hibernate.HibernateRunner - user entity is in transient state, object: User(personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), username=Mishan@gmail.com, role=null, info=null)gs
+13:38.58.839 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+13:38.58.842 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+13:38.59.450 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+13:38.59.456 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+13:38.59.456 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+13:38.59.457 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+13:38.59.457 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+13:38.59.461 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+13:38.59.762 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+13:39.00.412 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+13:39.01.392 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+13:39.01.580 [main] WARN  com.maxim.hibernate.HibernateRunner - User is in detached state: User(personalInfo=PersonalInfo(firstname=Micka, lastname=Popokao, birthDate=Birthday[birthDate=1994-11-04]), username=Mishan@gmail.com, role=null, info=null), session is closed SessionImpl(1388972756<closed>)gs
+13:39.01.583 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+14:46.40.243 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+14:46.40.251 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+14:46.40.983 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+14:46.40.988 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+14:46.40.988 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+14:46.40.989 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+14:46.40.989 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+14:46.40.995 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+14:46.41.449 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+14:46.42.247 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+14:46.43.484 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+14:48.03.191 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+14:58.49.065 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+14:58.49.070 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+14:58.49.685 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+14:58.49.689 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+14:58.49.690 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+14:58.49.690 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+14:58.49.691 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+14:58.49.695 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+14:58.50.007 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+14:58.50.627 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+14:58.51.587 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+14:58.51.759 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:00.27.366 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:00.27.372 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:00.28.015 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:00.28.022 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:00.28.023 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:00.28.024 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:00.28.024 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:00.28.029 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:00.28.339 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:00.29.045 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:00.30.063 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:00.30.232 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:01.44.517 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:01.44.524 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:01.45.201 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:01.45.207 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:01.45.208 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:01.45.208 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:01.45.209 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:01.45.212 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:01.45.562 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:01.46.344 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:01.46.420 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:01.46.428 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:01.47.101 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:01.47.106 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:01.47.106 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:01.47.107 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:01.47.107 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:01.47.111 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:01.47.452 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:01.47.692 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:01.47.911 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703gs
+15:01.47.912 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: column "company_id_id" of relation "users" does not exist
+  Позиция: 27gs
+15:01.47.932 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:01.48.257 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:01.49.289 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:01.49.440 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 42703gs
+15:01.49.441 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: column "company_id_id" of relation "users" does not exist
+  Позиция: 27gs
+15:01.49.452 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:02.40.765 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:02.40.772 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:02.41.414 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:02.41.420 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:02.41.421 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:02.41.422 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:02.41.423 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:02.41.427 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:02.41.745 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:02.42.370 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:02.43.445 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:02.43.595 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:03.16.623 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:03.16.629 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:03.17.220 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:03.17.226 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:03.17.226 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:03.17.227 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:03.17.227 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:03.17.230 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:03.17.553 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:03.18.254 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:03.19.351 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:03.19.530 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:09.33.692 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:09.33.701 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:09.34.387 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:09.34.393 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:09.34.394 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:09.34.394 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:09.34.395 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:09.34.399 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:09.34.768 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:09.35.409 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:09.36.418 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:09.36.577 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:10.49.501 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:10.49.507 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:10.50.092 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:10.50.097 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:10.50.097 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:10.50.098 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:10.50.098 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:10.50.103 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:10.50.368 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:10.51.009 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:10.52.025 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:10.52.152 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505gs
+15:10.52.152 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "company_name_key"
+  Подробности: Key (name)=(Google) already exists.gs
+15:10.52.164 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:11.38.081 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:11.38.089 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:11.38.678 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:11.38.682 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:11.38.682 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:11.38.683 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:11.38.684 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:11.38.687 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:11.39.028 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:11.39.662 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:11.40.666 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:11.40.815 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505gs
+15:11.40.816 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "company_name_key"
+  Подробности: Key (name)=(Bobo) already exists.gs
+15:11.40.830 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:12.40.185 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:12.40.191 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:12.40.790 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:12.40.795 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:12.40.795 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:12.40.796 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:12.40.796 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:12.40.800 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:12.41.110 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:12.41.736 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:12.42.795 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:12.42.990 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:15.32.313 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:15.32.320 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:15.32.886 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:15.32.890 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:15.32.890 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:15.32.891 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:15.32.891 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:15.32.894 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:15.33.174 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:15.33.819 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:15.34.882 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:15.35.056 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:18.11.413 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:18.11.419 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:18.11.975 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:18.11.979 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:18.11.979 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:18.11.980 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:18.11.980 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:18.11.985 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:18.12.268 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:18.12.900 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:18.13.903 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:18.14.130 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:50.06.410 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:50.06.418 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:50.07.115 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:50.07.122 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:50.07.123 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:50.07.124 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:50.07.125 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:50.07.131 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:50.07.493 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:50.08.333 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:50.09.576 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:50.09.846 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:54.46.870 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:54.46.878 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:54.47.520 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:54.47.525 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:54.47.525 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:54.47.526 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:54.47.527 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:54.47.532 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:54.47.892 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:54.48.658 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:54.49.755 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:54.49.990 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:55.15.136 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:55.15.143 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:55.15.719 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:55.15.726 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:55.15.726 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:55.15.727 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:55.15.728 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+15:55.15.732 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+15:55.16.097 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+15:55.16.747 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+15:55.17.733 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+15:55.17.924 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+15:55.40.610 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+15:55.40.616 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+15:55.41.184 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+15:55.41.190 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+15:55.41.191 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+15:55.41.191 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+15:55.41.192 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs

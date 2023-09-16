@@ -3,8 +3,6 @@ package com.maxim.hibernate;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -18,10 +16,10 @@ import com.maxim.hibernate.util.HibernateUtils;
 public class HibernateRunner {
 
     // private static Logger log = LogManager.getLogger(HibernateRunner.class.getName());
-    private static final Logger logger = LogManager.getLogger(HibernateRunner.class);
+    // private static final Logger logger = LogManager.getLogger(HibernateRunner.class);
     public static void main(String[] args) throws SQLException {
         Company company = Company.builder()
-                                .name("Google")
+                                .name("Bobo")
                                 .build();
         User user = User.builder()
                         .username("Mishan@gmail.com")
@@ -38,10 +36,9 @@ public class HibernateRunner {
             try (session1) {
                 Transaction transaction = session1.beginTransaction();
 
-                session1.merge(company);
-                session1.merge(user);
+                System.out.println(session1.get(User.class, 7L));
 
-                session1.getTransaction().commit();
+                transaction.commit();
             }
         }
     }
