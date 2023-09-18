@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,7 +20,7 @@ import lombok.ToString;
 @Entity
 @Data
 @ToString(exclude = "users")
-@EqualsAndHashCode(exclude = "users")
+@EqualsAndHashCode(of = "name")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -29,6 +30,7 @@ public class Company {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(nullable = false, unique = true)
     private String name;
 
     @Builder.Default

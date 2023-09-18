@@ -35,7 +35,7 @@ public class HebertateRunnerTest {
         @Cleanup var session = sessionFactory.openSession();
         session.beginTransaction();
         
-        Company company = session.get(Company.class, 16L);
+        Company company = session.get(Company.class, 16);
 
         session.remove(company);
 
