@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
@@ -29,6 +30,41 @@ import jakarta.persistence.Table;
 import lombok.Cleanup;
 
 public class HebertateRunnerTest {
+
+    @Test
+    void checkLazyInitialization() {
+        Company company = null;
+        try (var sessionFactory = HibernateUtils.buildSessionFactory();
+                var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            company = session.get(Company.class, 14);
+
+            session.getTransaction().commit();
+        }
+
+        var users = company.getUsers();
+        System.out.println(users.size());
+
+    }
+    @Test
+    void getCompanyById() {
+        @Cleanup var sessionFactory = HibernateUtils.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+        
+        Company company = session.get(Company.class, 14);
+        Hibernate.initialize(company.getUsers());
+        System.out.println();
+
+
+        session.getTransaction().commit();
+    }
+
+
+ 
+
+
     @Test
     void deleteCompany() {
         @Cleanup var sessionFactory = HibernateUtils.buildSessionFactory();
