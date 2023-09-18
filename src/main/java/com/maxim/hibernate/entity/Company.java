@@ -34,7 +34,7 @@ public class Company {
     private String name;
 
     @Builder.Default
-    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
     // @JoinColumn(name = "company_id")
     private Set<User> users = new HashSet<>();
 

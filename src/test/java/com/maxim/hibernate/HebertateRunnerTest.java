@@ -32,6 +32,21 @@ import lombok.Cleanup;
 public class HebertateRunnerTest {
 
     @Test
+    void checkOrphanRemoval() {
+        try (var sessionFactory = HibernateUtils.buildSessionFactory();
+                var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            Company company = session.get(Company.class, 14);
+            company.getUsers().removeIf(user -> user.getId() == 9L);
+
+            session.getTransaction().commit();
+
+        }
+
+    }
+
+    @Test
     void checkLazyInitialization() {
         Company company = null;
         try (var sessionFactory = HibernateUtils.buildSessionFactory();
