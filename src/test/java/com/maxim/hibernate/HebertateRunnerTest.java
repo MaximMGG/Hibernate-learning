@@ -22,6 +22,7 @@ import org.junit.jupiter.api.Test;
 import com.maxim.hibernate.entity.Birthday;
 import com.maxim.hibernate.entity.Company;
 import com.maxim.hibernate.entity.PersonalInfo;
+import com.maxim.hibernate.entity.Profile;
 import com.maxim.hibernate.entity.User;
 import com.maxim.hibernate.util.HibernateUtils;
 
@@ -30,6 +31,28 @@ import jakarta.persistence.Table;
 import lombok.Cleanup;
 
 public class HebertateRunnerTest {
+
+        @Test
+        void checkOneToOne() {
+        try (var sessionFactory = HibernateUtils.buildSessionFactory();
+                var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            User user = User.builder()
+                            .username("Louil.com")
+                            .build();
+            
+            Profile profile = Profile.builder()
+                    .language("en")
+                    .street("DowningStrit")
+                    .build();
+
+            User merge = session.merge(user);
+            profile.setUser(merge);
+            
+            session.getTransaction().commit();
+        }
+    }
 
     @Test
     void checkOrphanRemoval() {

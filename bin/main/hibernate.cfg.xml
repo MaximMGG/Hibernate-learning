@@ -14,5 +14,6 @@
 
         <mapping class="com.maxim.hibernate.entity.User"/>
         <mapping class="com.maxim.hibernate.entity.Company"/>
+        <mapping class="com.maxim.hibernate.entity.Profile"/>
     </session-factory>
 </hibernate-configuration>
