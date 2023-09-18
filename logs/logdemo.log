@@ -138,3 +138,102 @@
 17:00.46.755 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
 17:00.47.929 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
 17:01.01.823 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+10:27.07.915 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+10:27.07.925 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+10:27.08.742 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+10:27.08.749 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+10:27.08.749 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+10:27.08.750 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+10:27.08.750 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+10:27.08.754 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+10:27.09.216 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+10:27.09.987 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+10:27.11.186 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+10:27.11.445 [main] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 0, SQLState: 23505gs
+10:27.11.446 [main] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - ERROR: duplicate key value violates unique constraint "users_username_key"
+  Подробности: Key (username)=(Bil@gmail.com) already exists.gs
+10:27.11.465 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+10:29.06.072 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+10:29.06.078 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+10:29.06.646 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+10:29.06.651 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+10:29.06.652 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+10:29.06.652 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+10:29.06.653 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+10:29.06.656 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+10:29.06.973 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+10:29.07.583 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+10:29.08.655 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+10:29.08.858 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+10:30.30.889 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+10:30.30.896 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+10:30.31.453 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+10:30.31.460 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+10:30.31.460 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+10:30.31.461 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+10:30.31.462 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+10:30.31.465 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+10:30.31.797 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+10:30.32.415 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+10:30.33.501 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+10:30.33.653 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+10:30.51.612 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+10:30.51.620 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+10:30.52.197 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+10:30.52.201 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+10:30.52.202 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+10:30.52.202 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+10:30.52.203 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+10:30.52.207 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+10:30.52.469 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+10:30.53.130 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+10:30.54.206 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+10:30.54.347 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+10:31.21.366 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+10:31.21.372 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+10:31.21.956 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+10:31.21.960 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+10:31.21.960 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+10:31.21.961 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+10:31.21.961 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+10:31.21.964 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+10:31.22.260 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+10:31.22.865 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+10:31.23.944 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+10:31.24.168 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+10:35.08.817 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+10:35.08.827 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+10:35.09.406 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+10:35.09.411 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+10:35.09.411 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+10:35.09.412 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+10:35.09.413 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+10:35.09.417 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+10:35.09.692 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+10:35.10.359 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+10:35.11.462 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+10:35.11.695 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+11:08.24.663 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+11:08.24.673 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+11:08.25.401 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+11:08.25.409 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+11:08.25.409 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+11:08.25.410 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+11:08.25.410 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+11:08.25.418 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+11:08.25.748 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+11:08.26.517 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+11:08.27.845 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+11:09.01.259 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs
+11:13.43.719 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.2.5.Finalgs
+11:13.43.727 [main] INFO  org.hibernate.cfg.Environment - HHH000406: Using bytecode reflection optimizergs
+11:13.44.482 [main] WARN  org.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)gs
+11:13.44.489 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001005: Loaded JDBC driver class: org.postgresql.Drivergs
+11:13.44.489 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001012: Connecting with JDBC URL [jdbc:postgresql://localhost:5433/postgres]gs
+11:13.44.490 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {password=****, user=postgres}gs
+11:13.44.490 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: falsegs
+11:13.44.496 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001115: Connection pool size: 20 (min=1)gs
+11:13.44.857 [main] WARN  org.hibernate.orm.deprecation - HHH90000026: PostgreSQL10Dialect has been deprecated; use org.hibernate.dialect.PostgreSQLDialect insteadgs
+11:13.45.591 [main] INFO  org.hibernate.bytecode.internal.BytecodeProviderInitiator - HHH000021: Bytecode provider name : bytebuddygs
+11:13.46.757 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]gs
+11:14.12.145 [main] INFO  org.hibernate.orm.connections.pooling - HHH10001008: Cleaning up connection pool [jdbc:postgresql://localhost:5433/postgres]gs

@@ -1,7 +1,9 @@
 package com.maxim.hibernate.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,8 +31,15 @@ public class Company {
 
     private String name;
 
-    @OneToMany(mappedBy = "company")
+    @Builder.Default
+    @OneToMany(mappedBy = "company", cascade = CascadeType.ALL)
     // @JoinColumn(name = "company_id")
-    private Set<User> users;
+    private Set<User> users = new HashSet<>();
+
+
+    public void addUser(User user) {
+        users.add(user);
+        user.setCompany(this);
+    }
     
 }

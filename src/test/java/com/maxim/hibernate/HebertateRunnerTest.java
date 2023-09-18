@@ -29,6 +29,40 @@ import jakarta.persistence.Table;
 import lombok.Cleanup;
 
 public class HebertateRunnerTest {
+    @Test
+    void deleteCompany() {
+        @Cleanup var sessionFactory = HibernateUtils.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+        
+        Company company = session.get(Company.class, 16L);
+
+        session.remove(company);
+
+        session.getTransaction().commit();
+
+    }
+
+    @Test
+    void addUserToNewCompany() {
+        @Cleanup var sessionFactory = HibernateUtils.buildSessionFactory();
+        @Cleanup var session = sessionFactory.openSession();
+        session.beginTransaction();
+        
+        Company company = Company.builder()
+                            .name("Facebook")
+                            .build();
+
+        User user = User.builder()
+                        .username("Michel")
+                        .build();
+        
+        company.addUser(user);
+
+        session.merge(company);
+
+        session.getTransaction().commit();
+    }
 
     @Test
     void checkGetReflectionApi() throws SQLException, NoSuchMethodException, SecurityException, InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException{

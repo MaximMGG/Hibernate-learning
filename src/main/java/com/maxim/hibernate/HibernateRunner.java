@@ -39,6 +39,7 @@ public class HibernateRunner {
                 user.setCompany(c);
 
                 session1.merge(user);
+                // System.out.println(session1.get(Company.class, 13L));
 
                 transaction.commit();
             }
