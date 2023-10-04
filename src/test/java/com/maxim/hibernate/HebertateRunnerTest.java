@@ -22,7 +22,6 @@ import org.junit.jupiter.api.Test;
 import com.maxim.hibernate.entity.Birthday;
 import com.maxim.hibernate.entity.Company;
 import com.maxim.hibernate.entity.PersonalInfo;
-import com.maxim.hibernate.entity.Profile;
 import com.maxim.hibernate.entity.User;
 import com.maxim.hibernate.util.HibernateUtils;
 
@@ -38,19 +37,26 @@ public class HebertateRunnerTest {
                 var session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            User user = User.builder()
-                            .username("Louil.com")
-                            .build();
-            
-            Profile profile = Profile.builder()
-                    .language("en")
-                    .street("DowningStrit")
-                    .build();
+            User u = session.get(User.class, 32L);
 
-            User merge = session.merge(user);
-            profile.setUser(merge);
+            System.out.println(u);
+
+
+
+            // User user = User.builder()
+            //                 .username("Louil1.com")
+            //                 .build();
             
+            // Profile profile = Profile.builder()
+            //         .language("en")
+            //         .street("DowninaagStrit")
+            //         .build();
+            // profile.setUser(user);
+
+            // session.merge(user);
+
             session.getTransaction().commit();
+
         }
     }
 
