@@ -20,6 +20,7 @@ import org.hibernate.SessionFactory;
 import org.junit.jupiter.api.Test;
 
 import com.maxim.hibernate.entity.Birthday;
+import com.maxim.hibernate.entity.Chat;
 import com.maxim.hibernate.entity.Company;
 import com.maxim.hibernate.entity.PersonalInfo;
 import com.maxim.hibernate.entity.User;
@@ -30,6 +31,35 @@ import jakarta.persistence.Table;
 import lombok.Cleanup;
 
 public class HebertateRunnerTest {
+
+
+        @Test
+        void manyToManyTest() {
+        try (var sessionFactory = HibernateUtils.buildSessionFactory();
+                var session = sessionFactory.openSession()) {
+            session.beginTransaction();
+
+            User user = session.get(User.class, 16L);
+
+            Chat chat = Chat.builder()
+                            .name("superChat3")
+                            .build();
+
+            
+            user.addChat(chat);
+            // session.save(chat);
+            session.merge(chat);
+
+            System.out.println();
+
+            session.getTransaction().commit();
+                    
+            
+        }
+
+        }
+
+
 
         @Test
         void checkOneToOne() {
