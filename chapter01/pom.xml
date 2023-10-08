@@ -8,6 +8,5 @@
   </parent>
 
   <artifactId>chapter01</artifactId>
-  <version>${parent.varsion}</version>
 
 </project>
