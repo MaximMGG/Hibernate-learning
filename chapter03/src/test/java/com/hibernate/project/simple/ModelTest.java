@@ -3,6 +3,8 @@ package com.hibernate.project.simple;
 import org.testng.annotations.Test;
 
 import com.hibernate.project.Person;
+import com.hibernate.project.Ranking;
+import com.hibernate.project.Skill;
 
 public class ModelTest {
     

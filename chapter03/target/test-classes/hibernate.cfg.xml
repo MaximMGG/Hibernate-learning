@@ -15,5 +15,7 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create-drop</property>
         <mapping class="com.hibernate.project.Person"/>
+        <mapping class="com.hibernate.project.Skill"/>
+        <mapping class="com.hibernate.project.Ranking"/>
     </session-factory>
 </hibernate-configuration>

@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-import com.hibernate.project.simple.Skill;
-
 @Entity
 public class Ranking {
 
