@@ -1,4 +1,4 @@
-package com.hibernate.project.jdbc;
+package com.hibernate.project;
 
 import java.util.List;
 
@@ -11,8 +11,6 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
-import com.hibernate.project.pojo.Message;
 
 public class PersistenceHTest {
     

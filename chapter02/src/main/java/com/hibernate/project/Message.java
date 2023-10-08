@@ -1,4 +1,4 @@
-package com.hibernate.project.pojo;
+package com.hibernate.project;
 
 import java.util.Objects;
 
