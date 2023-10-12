@@ -146,4 +146,83 @@ public class PersonTest {
 
         session.save(ranking);
     }
+
+
+    private int getAverage(String subject, String skill) {
+        try (Session session = factory.openSession()) {
+            Transaction tx = session.beginTransaction();
+
+            Query<Ranking> query = session.createQuery(
+                "from Ranking r where r.subject.name=:name " +
+                "and r.skill.name=:skill", Ranking.class);
+        
+
+            query.setParameter("name", subject);
+            query.setParameter("skill", skill);
+
+            IntSummaryStatistics stats = query.list()
+                                            .stream()
+                                            .collect(Collectors.summarizingInt(Ranking::getRanking));
+
+            int avarage = (int) stats.getAverage();
+            tx.commit();
+            return avarage;
+        }
+    }
+
+    @Test
+    public void changeRanking() {
+        populateRankingData();
+        try (Session session = factory.openSession()) {
+            Transaction tx = session.beginTransaction();
+
+            Query<Ranking> query = session.createQuery("from Ranking r " +
+                                                        "where r.subject.name=:subject and " +
+                                                        "r.observer.name=:observer and " +
+                                                        "r.skill.name=:skill", Ranking.class);
+
+            query.setParameter("subject", "J. C. Smell");
+            query.setParameter("observer", "Gene Showrama");
+            query.setParameter("skill", "Java");
+
+            Ranking ranking = query.uniqueResult();
+            Assert.assertNotNull(ranking, "Could not find matching ranking");
+            ranking.setRanking(9);
+            tx.commit();
+        }
+
+        Assert.assertEquals(getAverage("J. C. Smell", "Java"), 8);
+    }
+
+
+    private Ranking findRanking(Session session, String subject, String observer, String skill) {
+        Query<Ranking> query = session.createQuery(
+            "from Ranking r " +
+                        "where r.subject.name=:subject and " +
+                        "r.observer.name=:observer and " +
+                        "r.skill.name=:skill", Ranking.class);
+        query.setParameter("skill", skill);
+        query.setParameter("subject", subject);
+        query.setParameter("observer", observer);
+
+
+        Ranking ranking = query.uniqueResult();
+        return ranking;
+    }
+
+
+    @Test
+    public void removeRanking() {
+        populateRankingData();
+        try (Session session = factory.openSession()) {
+            Transaction tx = session.beginTransaction();
+
+            Ranking ranking = findRanking(session, "J. C. Smell", "Gene Showrama", "Java");
+            Assert.assertNotNull(ranking);
+            session.delete(ranking);
+            tx.commit();
+
+            Assert.assertEquals(getAverage("J. C. Smell" , "Java"), 7);
+        }
+    }
 }

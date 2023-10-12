@@ -2,26 +2,26 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-08T14:15:00 EEST" name="Surefire suite" finished-at="2023-10-08T14:15:01 EEST" duration-ms="1876">
+  <suite started-at="2023-10-12T11:22:59 EEST" name="Surefire suite" finished-at="2023-10-12T11:23:01 EEST" duration-ms="2038">
     <groups>
     </groups>
-    <test started-at="2023-10-08T14:15:00 EEST" name="Surefire test" finished-at="2023-10-08T14:15:01 EEST" duration-ms="1876">
+    <test started-at="2023-10-12T11:22:59 EEST" name="Surefire test" finished-at="2023-10-12T11:23:01 EEST" duration-ms="2038">
       <class name="com.hibernate.project.jdbc.PersistenceTest">
-        <test-method signature="readMessage()[pri:0, instance:com.hibernate.project.jdbc.PersistenceTest@25b485ba]" started-at="2023-10-08T14:15:01 EEST" name="readMessage" finished-at="2023-10-08T14:15:01 EEST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.jdbc.PersistenceTest@25b485ba]" started-at="2023-10-12T11:23:01 EEST" name="setup" finished-at="2023-10-12T11:23:01 EEST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="readMessage()[pri:0, instance:com.hibernate.project.jdbc.PersistenceTest@25b485ba]" started-at="2023-10-12T11:23:01 EEST" name="readMessage" finished-at="2023-10-12T11:23:01 EEST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readMessage -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.jdbc.PersistenceTest@25b485ba]" started-at="2023-10-08T14:15:01 EEST" name="setup" finished-at="2023-10-08T14:15:01 EEST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
       </class> <!-- com.hibernate.project.jdbc.PersistenceTest -->
       <class name="com.hibernate.project.jdbc.PersistenceHTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.jdbc.PersistenceHTest@1b083826]" started-at="2023-10-08T14:15:00 EEST" name="setup" finished-at="2023-10-08T14:15:01 EEST" duration-ms="1537" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.jdbc.PersistenceHTest@1b083826]" started-at="2023-10-12T11:22:59 EEST" name="setup" finished-at="2023-10-12T11:23:01 EEST" duration-ms="1674" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="readMessage()[pri:0, instance:com.hibernate.project.jdbc.PersistenceHTest@1b083826]" started-at="2023-10-08T14:15:01 EEST" name="readMessage" finished-at="2023-10-08T14:15:01 EEST" duration-ms="292" status="PASS">
+        <test-method signature="readMessage()[pri:0, instance:com.hibernate.project.jdbc.PersistenceHTest@1b083826]" started-at="2023-10-12T11:23:01 EEST" name="readMessage" finished-at="2023-10-12T11:23:01 EEST" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- readMessage -->
