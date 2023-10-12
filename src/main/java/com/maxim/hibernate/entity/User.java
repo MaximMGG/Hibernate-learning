@@ -1,6 +1,6 @@
 package com.maxim.hibernate.entity;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.hibernate.annotations.Type;
 
@@ -76,7 +76,7 @@ public class User {
     @JoinTable(name = "users_chat",
     joinColumns = @JoinColumn(name = "user_id"),
     inverseJoinColumns = @JoinColumn(name = "chat_id"))
-    private Set<Chat> chats = new HashSet<>();
+    private List<Chat> chats = new ArrayList<>();
     
     public void addChat(Chat chat) {
         chats.add(chat);

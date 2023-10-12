@@ -1,7 +1,7 @@
 package com.maxim.hibernate.entity;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -35,5 +35,5 @@ public class Chat {
     
     @Builder.Default
     @ManyToMany(mappedBy = "chats", cascade = CascadeType.MERGE)
-    private Set<User> users = new HashSet<>();
+    private List<User> users = new ArrayList<>();
 }

@@ -17,11 +17,13 @@ import java.util.stream.Collectors;
 import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.junit.jupiter.api.Test;
 
 import com.maxim.hibernate.entity.Birthday;
 import com.maxim.hibernate.entity.Chat;
 import com.maxim.hibernate.entity.Company;
+import com.maxim.hibernate.entity.LocaleInfo;
 import com.maxim.hibernate.entity.PersonalInfo;
 import com.maxim.hibernate.entity.User;
 import com.maxim.hibernate.util.HibernateUtils;
@@ -34,15 +36,31 @@ public class HebertateRunnerTest {
 
 
         @Test
+        void localeInfo() {
+        try (var sessionFactory = HibernateUtils.buildSessionFactory();
+                var session = sessionFactory.openSession()) {
+            Transaction t = session.beginTransaction();
+
+            Company company = session.get(Company.class, 14L);
+            company.getLocale().add(LocaleInfo.of("ru", "russian desriprion"));
+            company.getLocale().add(LocaleInfo.of("en", "english desriprion"));
+
+            t.commit();
+
+        }
+
+        }
+
+        @Test
         void manyToManyTest() {
         try (var sessionFactory = HibernateUtils.buildSessionFactory();
                 var session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            User user = session.get(User.class, 16L);
+            User user = session.get(User.class, 1L);
 
             Chat chat = Chat.builder()
-                            .name("superChat3")
+                            .name("superChat4")
                             .build();
 
             
@@ -67,7 +85,7 @@ public class HebertateRunnerTest {
                 var session = sessionFactory.openSession()) {
             session.beginTransaction();
 
-            User u = session.get(User.class, 32L);
+            User u = session.get(User.class, 1L);
 
             System.out.println(u);
 
