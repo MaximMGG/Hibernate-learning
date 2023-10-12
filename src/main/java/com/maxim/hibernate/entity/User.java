@@ -39,7 +39,7 @@ import lombok.ToString;
 @Entity
 @Table(name = "users", schema = "public")
 @Access(value = AccessType.FIELD)
-public class User {
+public class User implements Comparable<User>{
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -81,6 +81,11 @@ public class User {
     public void addChat(Chat chat) {
         chats.add(chat);
         chat.getUsers().add(this);
+    }
+
+    @Override
+    public int compareTo(User u) {
+        return username.compareTo(u.username);
     }
 }
 

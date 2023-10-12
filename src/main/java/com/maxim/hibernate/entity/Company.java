@@ -1,9 +1,10 @@
 package com.maxim.hibernate.entity;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+import org.hibernate.annotations.SortNatural;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.CollectionTable;
@@ -13,6 +14,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.MapKey;
+import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -39,16 +42,19 @@ public class Company {
 
     @Builder.Default
     @OneToMany(mappedBy = "company", cascade = CascadeType.ALL, orphanRemoval = true)
-    // @JoinColumn(name = "company_id")
-    private Set<User> users = new HashSet<>();
+    @MapKey(name = "username")
+    @SortNatural
+    private Map<String, User> users = new TreeMap<>();
 
     @Builder.Default
     @ElementCollection
     @CollectionTable(name = "company_locale")
-    private List<LocaleInfo> locale = new ArrayList<>();;
+    @Column(name = "description")
+    @MapKeyColumn(name = "lang")
+    private Map<String, String> locales = new HashMap<>();
 
     public void addUser(User user) {
-        users.add(user);
+        users.put(user.getUsername(), user);
         user.setCompany(this);
     }
     

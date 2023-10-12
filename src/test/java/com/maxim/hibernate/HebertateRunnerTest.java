@@ -23,7 +23,6 @@ import org.junit.jupiter.api.Test;
 import com.maxim.hibernate.entity.Birthday;
 import com.maxim.hibernate.entity.Chat;
 import com.maxim.hibernate.entity.Company;
-import com.maxim.hibernate.entity.LocaleInfo;
 import com.maxim.hibernate.entity.PersonalInfo;
 import com.maxim.hibernate.entity.User;
 import com.maxim.hibernate.util.HibernateUtils;
@@ -37,18 +36,18 @@ public class HebertateRunnerTest {
 
         @Test
         void localeInfo() {
-        try (var sessionFactory = HibernateUtils.buildSessionFactory();
-                var session = sessionFactory.openSession()) {
-            Transaction t = session.beginTransaction();
+            try (var sessionFactory = HibernateUtils.buildSessionFactory();
+                    var session = sessionFactory.openSession()) {
+                Transaction t = session.beginTransaction();
 
-            Company company = session.get(Company.class, 14L);
-            company.getLocale().add(LocaleInfo.of("ru", "russian desriprion"));
-            company.getLocale().add(LocaleInfo.of("en", "english desriprion"));
+                Company company = session.get(Company.class, 14L);
+                // company.getLocale().add(LocaleInfo.of("ru", "russian desriprion"));
+                // company.getLocale().add(LocaleInfo.of("en", "english desriprion"));
 
-            t.commit();
+                company.getUsers().forEach((k, v) -> System.out.println(v));
+                t.commit();
 
-        }
-
+            }
         }
 
         @Test
@@ -115,7 +114,10 @@ public class HebertateRunnerTest {
             session.beginTransaction();
 
             Company company = session.get(Company.class, 14);
-            company.getUsers().removeIf(user -> user.getId() == 9L);
+            company.getUsers().forEach((k, v) -> {
+                    if (v.getId() == 14)
+                        company.getUsers().remove(k);
+            });
 
             session.getTransaction().commit();
 
@@ -182,12 +184,18 @@ public class HebertateRunnerTest {
                             .build();
 
         User user = User.builder()
-                        .username("Michel")
+                        .username("Lolbinole")
+                        .personalInfo(PersonalInfo.builder()
+                                                    .firstname("Petdro")
+                                                    .lastname("Hulio")
+                                                    .birthDate(new Birthday(LocalDate.of(1992, 12, 12)))
+                                                    .build())
+                        .company(company)
                         .build();
         
-        company.addUser(user);
-
-        session.merge(company);
+                        
+                        session.merge(user);
+                        company.addUser(user);
 
         session.getTransaction().commit();
     }
