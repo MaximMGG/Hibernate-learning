@@ -1,7 +1,10 @@
 package com.hibernate.project.application;
 
 
+import java.util.HashMap;
 import java.util.IntSummaryStatistics;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.hibernate.Session;
@@ -14,6 +17,38 @@ import com.hibernate.project.Skill;
 import com.hibernate.project.util.SessionUtil;
 
 public class HibernateRankingService implements RankingService {
+
+    @Override
+    public Map<String, Integer> findRankingFor(String subject) {
+        try (Session session = SessionUtil.getSession()) {
+
+        return findRankingFor(session, subject);
+        }
+    }
+
+    private Map<String, Integer> findRankingFor(Session session, String subject) {
+        Map<String, Integer> result = new HashMap<>();
+        Query<Ranking> query = session.createQuery(
+                                        "from Ranking r " +
+                                        "where r.subject.name=:subject order by r.skill.name", Ranking.class);
+        query.setParameter("subject", subject);
+        List<Ranking> rankings = query.list();
+        String lastSkillName = "";
+        int sum = 0;
+        int count = 0;
+
+        for(Ranking r : rankings) {
+            if (!lastSkillName.equals(r.getSkill().getName())) {
+                sum = 0;
+                count = 0;
+                lastSkillName = r.getSkill().getName();
+            }
+            sum += r.getRanking();
+            count++;
+            result.put(lastSkillName, sum / count);
+        }
+        return result;
+    }
 
     @Override
     public void updateRanking(String subject, String observer, String skill, int rank) {
@@ -139,6 +174,8 @@ public class HibernateRankingService implements RankingService {
         query.setParameter("name", name);
         return query.uniqueResult();
     }
+
+
 
 
 

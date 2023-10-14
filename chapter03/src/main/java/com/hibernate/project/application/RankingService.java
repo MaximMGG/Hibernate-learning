@@ -1,5 +1,7 @@
 package com.hibernate.project.application;
 
+import java.util.Map;
+
 public interface RankingService {
     
     int getRankingFor(String subject, String skill);
@@ -10,5 +12,5 @@ public interface RankingService {
 
     void removeRanking(String subject, String observer, String skill);
 
-
+    Map<String, Integer> findRankingFor(String subject);
 }
