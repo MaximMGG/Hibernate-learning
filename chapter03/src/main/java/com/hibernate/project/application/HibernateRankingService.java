@@ -16,6 +16,23 @@ import com.hibernate.project.util.SessionUtil;
 public class HibernateRankingService implements RankingService {
 
     @Override
+    public void updateRanking(String subject, String observer, String skill, int rank) {
+        try (Session session = SessionUtil.getSession()) {
+            Transaction tx = session.beginTransaction();
+
+            Ranking ranking = findRanking(session, subject, observer, skill);
+            if (ranking == null) {
+                ranking = new Ranking();
+                addRanking(session, subject, observer, skill, rank);
+            } else {
+                ranking.setRanking(rank);
+            }
+            tx.commit();
+        }
+    }
+
+
+    @Override
     public void addRanking(String subject, String observer, String skill, int rank) {
         try (Session session = SessionUtil.getSession()) {
             Transaction tx = session.beginTransaction();
@@ -23,6 +40,18 @@ public class HibernateRankingService implements RankingService {
 
             tx.commit();
 
+        }
+    }
+
+    @Override
+    public void removeRanking(String subject, String observer, String skill) {
+        try (Session session = SessionUtil.getSession()) {
+            Transaction tx = session.beginTransaction();
+            Ranking ranking = findRanking(session, subject, observer, skill);
+            if (ranking != null) {
+                session.delete(ranking);
+            }
+            tx.commit();
         }
     }
 
@@ -37,6 +66,18 @@ public class HibernateRankingService implements RankingService {
         }
     }
 
+    private Ranking findRanking(Session session, String subject, String observer, String skill) {
+        Query<Ranking> query = session.createQuery(
+                                        "from Ranking r " +
+                                        "where r.subject.name=:subject and " +
+                                        "r.observer.name=:observer and " +
+                                        "r.skill.name=:skill", Ranking.class);
+        query.setParameter("subject", subject);
+        query.setParameter("observer", observer);
+        query.setParameter("skill", skill);
+
+        return query.uniqueResult();
+    }
 
     private int getRankingFor(Session session, String subjectName, String skillname) {
         Query<Ranking> query = session.createQuery(
@@ -98,6 +139,8 @@ public class HibernateRankingService implements RankingService {
         query.setParameter("name", name);
         return query.uniqueResult();
     }
+
+
 
 
 }

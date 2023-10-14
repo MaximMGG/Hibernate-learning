@@ -6,5 +6,9 @@ public interface RankingService {
 
     void addRanking(String subject, String observer, String skill, int ranking);
 
+    void updateRanking(String subject, String observer, String skill, int ranking);
+
+    void removeRanking(String subject, String observer, String skill);
+
 
 }

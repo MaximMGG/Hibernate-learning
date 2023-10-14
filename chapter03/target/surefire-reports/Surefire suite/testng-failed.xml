@@ -3,13 +3,11 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="com.hibernate.project.PersonTest">
+      <class name="com.hibernate.project.application.UpdateRankingTest">
         <methods>
-          <include name="testRankings"/>
-          <include name="removeRanking"/>
-          <include name="setup"/>
+          <include name="updateNonexistingRanking"/>
         </methods>
-      </class> <!-- com.hibernate.project.PersonTest -->
+      </class> <!-- com.hibernate.project.application.UpdateRankingTest -->
     </classes>
   </test> <!-- Surefire test(failed) -->
 </suite> <!-- Failed suite [Surefire suite] -->

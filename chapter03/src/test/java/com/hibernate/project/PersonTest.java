@@ -11,20 +11,27 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.query.Query;
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class PersonTest {
     
     private SessionFactory factory;
 
-    @BeforeClass
+    @BeforeMethod
     public void setup() {
         StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
                                                     .configure()
                                                     .build();
         factory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
     }
+
+    @AfterMethod
+    public void shutSown() {
+        factory.close();
+    }
+
 
     @Test
     public void testSavePerson() {

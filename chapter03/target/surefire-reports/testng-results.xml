@@ -1,134 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="4" failed="2" skipped="0">
+<testng-results ignored="0" total="17" passed="17" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-12T11:23:06 EEST" name="Surefire suite" finished-at="2023-10-12T11:23:09 EEST" duration-ms="2380">
+  <suite started-at="2023-10-14T16:03:04 EEST" name="Surefire suite" finished-at="2023-10-14T16:03:07 EEST" duration-ms="3166">
     <groups>
     </groups>
-    <test started-at="2023-10-12T11:23:06 EEST" name="Surefire test" finished-at="2023-10-12T11:23:09 EEST" duration-ms="2380">
+    <test started-at="2023-10-14T16:03:04 EEST" name="Surefire test" finished-at="2023-10-14T16:03:07 EEST" duration-ms="3166">
       <class name="com.hibernate.project.simple.ModelTest">
-        <test-method signature="testModelCreation()[pri:0, instance:com.hibernate.project.simple.ModelTest@3c87521]" started-at="2023-10-12T11:23:09 EEST" name="testModelCreation" finished-at="2023-10-12T11:23:09 EEST" duration-ms="17" status="PASS">
+        <test-method signature="testModelCreation()[pri:0, instance:com.hibernate.project.simple.ModelTest@6b419da]" started-at="2023-10-14T16:03:07 EEST" name="testModelCreation" finished-at="2023-10-14T16:03:07 EEST" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testModelCreation -->
       </class> <!-- com.hibernate.project.simple.ModelTest -->
-      <class name="com.hibernate.project.PersonTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.PersonTest@2893de87]" started-at="2023-10-12T11:23:06 EEST" name="setup" finished-at="2023-10-12T11:23:08 EEST" duration-ms="1755" status="PASS">
+      <class name="com.hibernate.project.application.AddRankingTest">
+        <test-method signature="addRanking()[pri:0, instance:com.hibernate.project.application.AddRankingTest@4ae3c1cd]" started-at="2023-10-14T16:03:04 EEST" name="addRanking" finished-at="2023-10-14T16:03:06 EEST" duration-ms="2182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addRanking -->
+      </class> <!-- com.hibernate.project.application.AddRankingTest -->
+      <class name="com.hibernate.project.util.SessionBuilderTest">
+        <test-method signature="testSessionFacotry()[pri:0, instance:com.hibernate.project.util.SessionBuilderTest@3b2da18f]" started-at="2023-10-14T16:03:07 EEST" name="testSessionFacotry" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSessionFacotry -->
+      </class> <!-- com.hibernate.project.util.SessionBuilderTest -->
+      <class name="com.hibernate.project.application.FindAverageRankingTest">
+        <test-method signature="validateRankingAverage()[pri:0, instance:com.hibernate.project.application.FindAverageRankingTest@341b80b2]" started-at="2023-10-14T16:03:06 EEST" name="validateRankingAverage" finished-at="2023-10-14T16:03:06 EEST" duration-ms="34" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRankingAverage -->
+      </class> <!-- com.hibernate.project.application.FindAverageRankingTest -->
+      <class name="com.hibernate.project.application.UpdateRankingTest">
+        <test-method signature="updateExistingRanking()[pri:0, instance:com.hibernate.project.application.UpdateRankingTest@2145433b]" started-at="2023-10-14T16:03:06 EEST" name="updateExistingRanking" finished-at="2023-10-14T16:03:06 EEST" duration-ms="32" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateExistingRanking -->
+        <test-method signature="updateNonexistingRanking()[pri:0, instance:com.hibernate.project.application.UpdateRankingTest@2145433b]" started-at="2023-10-14T16:03:06 EEST" name="updateNonexistingRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateNonexistingRanking -->
+      </class> <!-- com.hibernate.project.application.UpdateRankingTest -->
+      <class name="com.hibernate.project.RankingTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="52" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="changeRanking()[pri:0, instance:com.hibernate.project.PersonTest@2893de87]" started-at="2023-10-12T11:23:08 EEST" name="changeRanking" finished-at="2023-10-12T11:23:09 EEST" duration-ms="519" status="PASS">
+        <test-method signature="changeRanking()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="changeRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changeRanking -->
-        <test-method signature="removeRanking()[pri:0, instance:com.hibernate.project.PersonTest@2893de87]" started-at="2023-10-12T11:23:09 EEST" name="removeRanking" finished-at="2023-10-12T11:23:09 EEST" duration-ms="13" status="FAIL">
-          <exception class="org.hibernate.NonUniqueResultException">
-            <message>
-              <![CDATA[query did not return a unique result: 2]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.hibernate.NonUniqueResultException: query did not return a unique result: 2
-at org.hibernate.query.spi.AbstractQuery.uniqueElement(AbstractQuery.java:1415)
-at org.hibernate.query.spi.AbstractQuery.uniqueResult(AbstractQuery.java:1383)
-at com.hibernate.project.PersonTest.findRanking(PersonTest.java:209)
-at com.hibernate.project.PersonTest.removeRanking(PersonTest.java:220)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.hibernate.NonUniqueResultException -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="shutDown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="51" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="removeRanking()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="removeRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeRanking -->
-        <test-method signature="testRankings()[pri:0, instance:com.hibernate.project.PersonTest@2893de87]" started-at="2023-10-12T11:23:09 EEST" name="testRankings" finished-at="2023-10-12T11:23:09 EEST" duration-ms="17" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [3] but found [4]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [3] but found [4]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:797)
-at org.testng.Assert.assertEquals(Assert.java:807)
-at com.hibernate.project.PersonTest.testRankings(PersonTest.java:117)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="shutDown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="18" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRankings -->
-        <test-method signature="testSavePerson()[pri:0, instance:com.hibernate.project.PersonTest@2893de87]" started-at="2023-10-12T11:23:09 EEST" name="testSavePerson" finished-at="2023-10-12T11:23:09 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- shutDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="65" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testSavePerson -->
-        <test-method signature="testSaveRanking()[pri:0, instance:com.hibernate.project.PersonTest@2893de87]" started-at="2023-10-12T11:23:09 EEST" name="testSaveRanking" finished-at="2023-10-12T11:23:09 EEST" duration-ms="16" status="PASS">
+        </test-method> <!-- setup -->
+        <test-method signature="testRanking()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="testRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRanking -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="66" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="shutDown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+        <test-method is-config="true" signature="shutDown()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="shutDown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDown -->
+        <test-method signature="testSaveRanking()[pri:0, instance:com.hibernate.project.RankingTest@7920ba90]" started-at="2023-10-14T16:03:07 EEST" name="testSaveRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSaveRanking -->
+      </class> <!-- com.hibernate.project.RankingTest -->
+      <class name="com.hibernate.project.PersonTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="96" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="changeRanking()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="changeRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- changeRanking -->
+        <test-method is-config="true" signature="shutSown()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="shutSown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutSown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="80" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="removeRanking()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="removeRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeRanking -->
+        <test-method is-config="true" signature="shutSown()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="shutSown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="18" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutSown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRankings()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="testRankings" finished-at="2023-10-14T16:03:07 EEST" duration-ms="17" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRankings -->
+        <test-method is-config="true" signature="shutSown()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="shutSown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="16" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutSown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="shutSown()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="shutSown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutSown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="setup" finished-at="2023-10-14T16:03:07 EEST" duration-ms="67" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testSavePerson()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="testSavePerson" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSavePerson -->
+        <test-method signature="testSaveRanking()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="testSaveRanking" finished-at="2023-10-14T16:03:07 EEST" duration-ms="15" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveRanking -->
+        <test-method is-config="true" signature="shutSown()[pri:0, instance:com.hibernate.project.PersonTest@105fece7]" started-at="2023-10-14T16:03:07 EEST" name="shutSown" finished-at="2023-10-14T16:03:07 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutSown -->
       </class> <!-- com.hibernate.project.PersonTest -->
+      <class name="com.hibernate.project.application.RemoveRankingTest">
+        <test-method signature="removeNonexistRanking()[pri:0, instance:com.hibernate.project.application.RemoveRankingTest@55a1c291]" started-at="2023-10-14T16:03:06 EEST" name="removeNonexistRanking" finished-at="2023-10-14T16:03:06 EEST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeNonexistRanking -->
+        <test-method signature="removeRanking()[pri:0, instance:com.hibernate.project.application.RemoveRankingTest@55a1c291]" started-at="2023-10-14T16:03:06 EEST" name="removeRanking" finished-at="2023-10-14T16:03:06 EEST" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeRanking -->
+      </class> <!-- com.hibernate.project.application.RemoveRankingTest -->
     </test> <!-- Surefire test -->
   </suite> <!-- Surefire suite -->
 </testng-results>
