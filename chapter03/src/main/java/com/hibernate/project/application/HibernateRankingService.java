@@ -18,6 +18,38 @@ import com.hibernate.project.util.SessionUtil;
 
 public class HibernateRankingService implements RankingService {
 
+    //TODO (maxim) test this method
+    @Override
+    public Person findBestPersonFor(String skill) {
+        Person person = null;
+        try (Session session = SessionUtil.getSession()) {
+            Transaction tx = session.beginTransaction();
+
+            person = findBestPersonFor(session, skill);
+            tx.commit();
+        }
+        return person;
+    }
+
+    public Person findBestPersonFor(Session session, String skill) {
+        Query<Object[]> query = session.createQuery(
+                                        "select r.subject.name, avg(r.ranking) " +
+                                        "from Ranking r " +
+                                        "where r.skill.name=:skill " +
+                                        "gourp by r.subject.name " +
+                                        "order by avg(r.ranking) desk", Object[].class);
+        query.setParameter("skill", skill);
+        query.setMaxResults(1);
+        List<Object[]> result = query.list();
+        if (result.size() > 0) {
+            Object[] row = result.get(0);
+            String personName  = row[0].toString();
+
+            return findPerson(session, personName);
+        }
+        return null;
+    }
+
     @Override
     public Map<String, Integer> findRankingFor(String subject) {
         try (Session session = SessionUtil.getSession()) {
@@ -36,6 +68,11 @@ public class HibernateRankingService implements RankingService {
         String lastSkillName = "";
         int sum = 0;
         int count = 0;
+
+        /**
+        query.list().stream().collect(Collectors.toMap(k -> k.getSkill().getName(), v -> v.getRanking()));
+        but it do not work becouse we need average ranking for skill, here would be not average, but last
+        */
 
         for(Ranking r : rankings) {
             if (!lastSkillName.equals(r.getSkill().getName())) {
@@ -174,10 +211,5 @@ public class HibernateRankingService implements RankingService {
         query.setParameter("name", name);
         return query.uniqueResult();
     }
-
-
-
-
-
 
 }
