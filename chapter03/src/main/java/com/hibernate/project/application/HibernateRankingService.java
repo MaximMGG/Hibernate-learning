@@ -18,7 +18,6 @@ import com.hibernate.project.util.SessionUtil;
 
 public class HibernateRankingService implements RankingService {
 
-    //TODO (maxim) test this method
     @Override
     public Person findBestPersonFor(String skill) {
         Person person = null;
@@ -36,8 +35,8 @@ public class HibernateRankingService implements RankingService {
                                         "select r.subject.name, avg(r.ranking) " +
                                         "from Ranking r " +
                                         "where r.skill.name=:skill " +
-                                        "gourp by r.subject.name " +
-                                        "order by avg(r.ranking) desk", Object[].class);
+                                        "group by r.subject.name " +
+                                        "order by avg(r.ranking) desc", Object[].class);
         query.setParameter("skill", skill);
         query.setMaxResults(1);
         List<Object[]> result = query.list();
@@ -73,8 +72,8 @@ public class HibernateRankingService implements RankingService {
         query.list().stream().collect(Collectors.toMap(k -> k.getSkill().getName(), v -> v.getRanking()));
         but it do not work becouse we need average ranking for skill, here would be not average, but last
         */
-
         for(Ranking r : rankings) {
+
             if (!lastSkillName.equals(r.getSkill().getName())) {
                 sum = 0;
                 count = 0;

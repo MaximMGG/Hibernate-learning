@@ -16,7 +16,6 @@ public class FindBestRankingTest {
     }
 
 
-    //TODO (maxim) need to run this code later
     @Test
     public void findBestForSkill() {
         service.addRanking("S1", "O1", "Sk1", 6);
