@@ -18,5 +18,6 @@
         <mapping class="com.hibernate.example.broken.Email"/>
         <mapping class="com.hibernate.example.mapped.Email"/>
         <mapping class="com.hibernate.example.mapped.Message"/>
+        <mapping class="com.hibernate.example.model.SimpleObject"/>
     </session-factory>
 </hibernate-configuration>
