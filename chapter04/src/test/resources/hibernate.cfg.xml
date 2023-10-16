@@ -16,5 +16,7 @@
         <property name="hbm2ddl.auto">create-drop</property>
         <mapping class="com.hibernate.example.broken.Message"/>
         <mapping class="com.hibernate.example.broken.Email"/>
+        <mapping class="com.hibernate.example.mapped.Email"/>
+        <mapping class="com.hibernate.example.mapped.Message"/>
     </session-factory>
 </hibernate-configuration>
