@@ -1,5 +1,6 @@
 package com.hibernate.example.mapped;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,7 +17,7 @@ public class Message {
     @Column
     String content;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     Email email;
 
     public Message() {}

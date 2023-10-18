@@ -19,5 +19,7 @@
         <mapping class="com.hibernate.example.mapped.Email"/>
         <mapping class="com.hibernate.example.mapped.Message"/>
         <mapping class="com.hibernate.example.model.SimpleObject"/>
+        <mapping class="com.hibernate.example.orphan.Library"/>
+        <mapping class="com.hibernate.example.orphan.Book"/>
     </session-factory>
 </hibernate-configuration>
