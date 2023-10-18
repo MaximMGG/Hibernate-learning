@@ -68,6 +68,4 @@ public class SimpleObject {
     public String toString() {
         return "SimpleObject [id=" + id + ", key=" + key + ", value=" + value + "]";
     }
-
-
 }
