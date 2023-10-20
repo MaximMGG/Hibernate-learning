@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-10-20T14:33:17 EEST" name="Surefire suite" finished-at="2023-10-20T14:33:20 EEST" duration-ms="2751">
+    <groups>
+    </groups>
+    <test started-at="2023-10-20T14:33:17 EEST" name="Surefire test" finished-at="2023-10-20T14:33:20 EEST" duration-ms="2751">
+      <class name="com.hibernate.example.general.SaveOrUpdateTest">
+        <test-method signature="testSaveOrUpdateEntity()[pri:0, instance:com.hibernate.example.general.SaveOrUpdateTest@57d5872c]" started-at="2023-10-20T14:33:20 EEST" name="testSaveOrUpdateEntity" finished-at="2023-10-20T14:33:20 EEST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveOrUpdateEntity -->
+      </class> <!-- com.hibernate.example.general.SaveOrUpdateTest -->
+      <class name="com.hibernate.example.general.RefreshTest">
+        <test-method signature="testRefresh()[pri:0, instance:com.hibernate.example.general.RefreshTest@41ee392b]" started-at="2023-10-20T14:33:20 EEST" name="testRefresh" finished-at="2023-10-20T14:33:20 EEST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRefresh -->
+      </class> <!-- com.hibernate.example.general.RefreshTest -->
+      <class name="com.hibernate.example.broken.BrokenInversionTest">
+        <test-method signature="testBrokenInversionCode()[pri:0, instance:com.hibernate.example.broken.BrokenInversionTest@77e9807f]" started-at="2023-10-20T14:33:17 EEST" name="testBrokenInversionCode" finished-at="2023-10-20T14:33:20 EEST" duration-ms="2296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBrokenInversionCode -->
+      </class> <!-- com.hibernate.example.broken.BrokenInversionTest -->
+      <class name="com.hibernate.example.orphan.OrphanRemovalTest">
+        <test-method signature="deleteLibrary()[pri:0, instance:com.hibernate.example.orphan.OrphanRemovalTest@36f0f1be]" started-at="2023-10-20T14:33:20 EEST" name="deleteLibrary" finished-at="2023-10-20T14:33:20 EEST" duration-ms="65" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteLibrary -->
+        <test-method signature="testOrphanRemoval()[pri:0, instance:com.hibernate.example.orphan.OrphanRemovalTest@36f0f1be]" started-at="2023-10-20T14:33:20 EEST" name="testOrphanRemoval" finished-at="2023-10-20T14:33:20 EEST" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrphanRemoval -->
+      </class> <!-- com.hibernate.example.orphan.OrphanRemovalTest -->
+      <class name="com.hibernate.example.general.MergeTest">
+        <test-method signature="testMerge()[pri:0, instance:com.hibernate.example.general.MergeTest@2ea6137]" started-at="2023-10-20T14:33:20 EEST" name="testMerge" finished-at="2023-10-20T14:33:20 EEST" duration-ms="24" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMerge -->
+      </class> <!-- com.hibernate.example.general.MergeTest -->
+      <class name="com.hibernate.example.broken.ProperSimpleInversionTest">
+        <test-method signature="testProperSimpleInversionCode()[pri:0, instance:com.hibernate.example.broken.ProperSimpleInversionTest@2d2e5f00]" started-at="2023-10-20T14:33:20 EEST" name="testProperSimpleInversionCode" finished-at="2023-10-20T14:33:20 EEST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProperSimpleInversionCode -->
+      </class> <!-- com.hibernate.example.broken.ProperSimpleInversionTest -->
+      <class name="com.hibernate.example.general.SaveLoadTest">
+        <test-method signature="testSaveLoad()[pri:0, instance:com.hibernate.example.general.SaveLoadTest@1e67a849]" started-at="2023-10-20T14:33:20 EEST" name="testSaveLoad" finished-at="2023-10-20T14:33:20 EEST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSaveLoad -->
+      </class> <!-- com.hibernate.example.general.SaveLoadTest -->
+      <class name="com.hibernate.example.general.DuplicateSaveTest">
+        <test-method signature="duplicateSaveTest()[pri:0, instance:com.hibernate.example.general.DuplicateSaveTest@4c40b76e]" started-at="2023-10-20T14:33:20 EEST" name="duplicateSaveTest" finished-at="2023-10-20T14:33:20 EEST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- duplicateSaveTest -->
+      </class> <!-- com.hibernate.example.general.DuplicateSaveTest -->
+      <class name="com.hibernate.example.mapped.ImplicitRelationshipTest">
+        <test-method signature="testImpliedRealtionship()[pri:0, instance:com.hibernate.example.mapped.ImplicitRelationshipTest@667a738]" started-at="2023-10-20T14:33:20 EEST" name="testImpliedRealtionship" finished-at="2023-10-20T14:33:20 EEST" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testImpliedRealtionship -->
+      </class> <!-- com.hibernate.example.mapped.ImplicitRelationshipTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

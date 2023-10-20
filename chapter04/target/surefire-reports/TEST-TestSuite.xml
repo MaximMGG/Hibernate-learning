@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="3.261" tests="10" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1251"/>
+    <property name="java.class.path" value="C:\Users\123\Desktop\JAVA projects\HibrnateBookLearning\hibernate_book_learning\chapter04\target\test-classes;C:\Users\123\Desktop\JAVA projects\HibrnateBookLearning\hibernate_book_learning\chapter04\target\classes;C:\Users\123\.m2\repository\org\hibernate\orm\hibernate-core\6.0.0.Alpha8\hibernate-core-6.0.0.Alpha8.jar;C:\Users\123\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\123\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\123\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\123\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\123\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\123\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\123\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\123\.m2\repository\net\bytebuddy\byte-buddy\1.10.21\byte-buddy-1.10.21.jar;C:\Users\123\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\123\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\123\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\123\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\123\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\123\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\123\.m2\repository\org\antlr\antlr4\4.9.1\antlr4-4.9.1.jar;C:\Users\123\.m2\repository\org\antlr\antlr4-runtime\4.9.1\antlr4-runtime-4.9.1.jar;C:\Users\123\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\123\.m2\repository\org\antlr\ST4\4.3\ST4-4.3.jar;C:\Users\123\.m2\repository\org\abego\treelayout\org.abego.treelayout.core\1.0.3\org.abego.treelayout.core-1.0.3.jar;C:\Users\123\.m2\repository\org\glassfish\javax.json\1.0.4\javax.json-1.0.4.jar;C:\Users\123\.m2\repository\com\ibm\icu\icu4j\61.1\icu4j-61.1.jar;C:\Users\123\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\123\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\123\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\123\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\123\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\123\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\123\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Kiev"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\123\AppData\Local\Temp\surefire10813341789020355092\surefirebooter-20231020143317123_35.jar C:\Users\123\AppData\Local\Temp\surefire10813341789020355092 2023-10-20T14-33-00_882-jvmRun1 surefire-20231020143317123_33tmp surefire_3-20231020143317123_34tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\123\Desktop\JAVA projects\HibrnateBookLearning\hibernate_book_learning\chapter04\target\test-classes;C:\Users\123\Desktop\JAVA projects\HibrnateBookLearning\hibernate_book_learning\chapter04\target\classes;C:\Users\123\.m2\repository\org\hibernate\orm\hibernate-core\6.0.0.Alpha8\hibernate-core-6.0.0.Alpha8.jar;C:\Users\123\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\123\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\123\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\123\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\123\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\123\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\123\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;C:\Users\123\.m2\repository\net\bytebuddy\byte-buddy\1.10.21\byte-buddy-1.10.21.jar;C:\Users\123\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\123\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\123\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\123\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\123\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\123\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\123\.m2\repository\org\antlr\antlr4\4.9.1\antlr4-4.9.1.jar;C:\Users\123\.m2\repository\org\antlr\antlr4-runtime\4.9.1\antlr4-runtime-4.9.1.jar;C:\Users\123\.m2\repository\org\antlr\antlr-runtime\3.5.2\antlr-runtime-3.5.2.jar;C:\Users\123\.m2\repository\org\antlr\ST4\4.3\ST4-4.3.jar;C:\Users\123\.m2\repository\org\abego\treelayout\org.abego.treelayout.core\1.0.3\org.abego.treelayout.core-1.0.3.jar;C:\Users\123\.m2\repository\org\glassfish\javax.json\1.0.4\javax.json-1.0.4.jar;C:\Users\123\.m2\repository\com\ibm\icu\icu4j\61.1\icu4j-61.1.jar;C:\Users\123\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\123\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\123\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\123\.m2\repository\com\h2database\h2\1.4.200\h2-1.4.200.jar;C:\Users\123\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\123\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\123\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\123"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2023-01-17"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\123\Desktop\JAVA projects\HibrnateBookLearning\hibernate_book_learning\chapter04"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\123\AppData\Local\Temp\surefire10813341789020355092\surefirebooter-20231020143317123_35.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.2+7-44"/>
+    <property name="user.name" value="123"/>
+    <property name="stdout.encoding" value="Cp1251"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\123\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\123\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.2"/>
+    <property name="user.dir" value="C:\Users\123\Desktop\JAVA projects\HibrnateBookLearning\hibernate_book_learning\chapter04"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1251"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\ia32\compiler;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;С:\Program Files\Java\jdk-19\bin;C:\Program Files\apache-maven-3.9.3\bin;C:\Gradle\gradle-8.2\bin;C:\Program Files\nvim\bin;C:\MinGW\bin;C:\Users\123\AppData\Local\Microsoft\WindowsApps;C:\ProgramData\chocolatey\bin;C:\Users\123\AppData\Local\nvim-data\site\pack\packer\start\nvim-treesitter\parser;C:\ProgramData\chocolatey\lib\zig\tools\zig-windows-x86_64-0.10.1;C:\Users\123\.local\bin;C:\Python311;C:\Program Files\nodejs\;C:\Program Files\Lua;C:\Program Files (x86)\Groovy\bin;C:\Program Files (x86)\Groovy\bin;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\cmake-3.27.6;C:\Program Files\CMake\bin;C:\msys64\ucrt64\bin;C:\msys64\mingw64\bin;C:\Users\123\AppData\Local\nvim-data\mason\packages\clangd\clangd_16.0.2\bin;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.22621.0\um\x64;C:\Program Files\Google\Chrome\Application;C:\Program Files\Bind;C:\Program Files\PowerShell\7\;C:\Users\123\.cargo\bin;C:\Program Files\apache-maven-3.9.3\bin;C:\Users\123\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Neovim\bin;C:\Users\123\AppData\Roaming\npm;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1251"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.2+7-44"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testBrokenInversionCode" classname="com.hibernate.example.broken.BrokenInversionTest" time="2.299">
+    <system-out><![CDATA[14:33:17,883 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+14:33:17,883 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.groovy]
+14:33:17,883 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [file:/C:/Users/123/Desktop/JAVA%20projects/HibrnateBookLearning/hibernate_book_learning/chapter04/target/test-classes/logback.xml]
+14:33:17,953 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - debug attribute not set
+14:33:17,953 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+14:33:17,960 |-INFO in ch.qos.logback.core.joran.action.AppenderAction - Naming appender as [STDOUT]
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.hibernate.SQL] to DEBUG
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.hibernate.SQL] to false
+14:33:17,984 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [SDTOUT]. Did you define it below instead of above in the configuration file?
+14:33:17,984 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting level of logger [org.hibernate.type.descriptor.sql] to TRACE
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.action.LoggerAction - Setting additivity of logger [org.hibernate.type.descriptor.sql] to false
+14:33:17,984 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [SDTOUT]. Did you define it below instead of above in the configuration file?
+14:33:17,984 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.action.RootLoggerAction - Setting level of ROOT logger to INFO
+14:33:17,984 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - Could not find an appender named [SDTOUT]. Did you define it below instead of above in the configuration file?
+14:33:17,984 |-ERROR in ch.qos.logback.core.joran.action.AppenderRefAction - See http://logback.qos.ch/codes.html#appender_order for more details.
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.action.ConfigurationAction - End of configuration.
+14:33:17,984 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@306e95ec - Registering current configuration as safe fallback point
+
+Hibernate: drop table if exists Book cascade 
+Hibernate: drop table if exists Email cascade 
+Hibernate: drop table if exists Email2 cascade 
+Hibernate: drop table if exists Library cascade 
+Hibernate: drop table if exists Message cascade 
+Hibernate: drop table if exists Message2 cascade 
+Hibernate: drop table if exists SimpleObject cascade 
+Hibernate: drop sequence if exists Book_SEQ
+Hibernate: drop sequence if exists Email2_SEQ
+Hibernate: drop sequence if exists Email_SEQ
+Hibernate: drop sequence if exists Library_SEQ
+Hibernate: drop sequence if exists Message2_SEQ
+Hibernate: drop sequence if exists Message_SEQ
+Hibernate: drop sequence if exists SimpleObject_SEQ
+Hibernate: create sequence Book_SEQ start with 1 increment by 50
+Hibernate: create sequence Email2_SEQ start with 1 increment by 50
+Hibernate: create sequence Email_SEQ start with 1 increment by 50
+Hibernate: create sequence Library_SEQ start with 1 increment by 50
+Hibernate: create sequence Message2_SEQ start with 1 increment by 50
+Hibernate: create sequence Message_SEQ start with 1 increment by 50
+Hibernate: create sequence SimpleObject_SEQ start with 1 increment by 50
+Hibernate: create table Book (id bigint not null, title varchar(255), library_id bigint, primary key (id))
+Hibernate: create table Email (id bigint not null, subject varchar(255), message_id bigint, primary key (id))
+Hibernate: create table Email2 (id bigint not null, subject varchar(255), primary key (id))
+Hibernate: create table Library (id bigint not null, name varchar(255), primary key (id))
+Hibernate: create table Message (id bigint not null, content varchar(255), email_id bigint, primary key (id))
+Hibernate: create table Message2 (id bigint not null, content varchar(255), email_id bigint, primary key (id))
+Hibernate: create table SimpleObject (id bigint not null, key varchar(255), value bigint, primary key (id))
+Hibernate: alter table if exists Book add constraint FKesionxg2ev3v25eneb22j9jpl foreign key (library_id) references Library
+Hibernate: alter table if exists Email add constraint FKdylyhs434pk7dcq350h8ythpm foreign key (message_id) references Message
+Hibernate: alter table if exists Message add constraint FK8ia8n8kuy52fmy40mk790wxko foreign key (email_id) references Email
+Hibernate: alter table if exists Message2 add constraint FK7buglj5ps81jdig97qe8rj8hj foreign key (email_id) references Email2
+Hibernate: call next value for Email_SEQ
+Hibernate: call next value for Email_SEQ
+Hibernate: call next value for Message_SEQ
+Hibernate: call next value for Message_SEQ
+Hibernate: insert into Email (message_id, subject, id) values (?, ?, ?)
+Hibernate: insert into Message (content, email_id, id) values (?, ?, ?)
+Hibernate: update Email set message_id=?, subject=? where id=?
+Hibernate: select e1_0.id, m1_0.id, m1_0.content, e2_0.id, e2_0.message_id, e2_0.subject, e1_0.subject from Email as e1_0 left outer join Message as m1_0 on e1_0.message_id = m1_0.id left outer join Email as e2_0 on m1_0.email_id = e2_0.id where e1_0.id = ?
+Email [id=1, subject=Broken, message=Broken]
+Message [id=1, content=Broken, email=null]
+]]></system-out>
+  </testcase>
+  <testcase name="testProperSimpleInversionCode" classname="com.hibernate.example.broken.ProperSimpleInversionTest" time="0.007">
+    <system-out><![CDATA[Hibernate: insert into Email (message_id, subject, id) values (?, ?, ?)
+Hibernate: insert into Message (content, email_id, id) values (?, ?, ?)
+Hibernate: update Email set message_id=?, subject=? where id=?
+Hibernate: select e1_0.id, m1_0.id, m1_0.content, e2_0.id, e2_0.message_id, e2_0.subject, e1_0.subject from Email as e1_0 left outer join Message as m1_0 on e1_0.message_id = m1_0.id left outer join Email as e2_0 on m1_0.email_id = e2_0.id where e1_0.id = ?
+Email [id=2, subject=Proper, message=Proper]
+Message [id=2, content=Proper, email=Proper]
+]]></system-out>
+  </testcase>
+  <testcase name="duplicateSaveTest" classname="com.hibernate.example.general.DuplicateSaveTest" time="0.268">
+    <system-out><![CDATA[Hibernate: call next value for SimpleObject_SEQ
+Hibernate: call next value for SimpleObject_SEQ
+Hibernate: insert into SimpleObject (key, value, id) values (?, ?, ?)
+Hibernate: insert into SimpleObject (key, value, id) values (?, ?, ?)
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testMerge" classname="com.hibernate.example.general.MergeTest" time="0.025">
+    <system-out><![CDATA[Hibernate: insert into SimpleObject (key, value, id) values (?, ?, ?)
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+Hibernate: update SimpleObject set key=?, value=? where id=?
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+]]></system-out>
+  </testcase>
+  <testcase name="testRefresh" classname="com.hibernate.example.general.RefreshTest" time="0.007">
+    <system-out><![CDATA[Hibernate: insert into SimpleObject (key, value, id) values (?, ?, ?)
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+]]></system-out>
+  </testcase>
+  <testcase name="testSaveLoad" classname="com.hibernate.example.general.SaveLoadTest" time="0.005">
+    <system-out><![CDATA[Hibernate: insert into SimpleObject (key, value, id) values (?, ?, ?)
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0 where s1_0.id = ?
+]]></system-out>
+  </testcase>
+  <testcase name="testSaveOrUpdateEntity" classname="com.hibernate.example.general.SaveOrUpdateTest" time="0.044">
+    <system-out><![CDATA[Hibernate: delete from SimpleObject
+Hibernate: insert into SimpleObject (key, value, id) values (?, ?, ?)
+Hibernate: update SimpleObject set key=?, value=? where id=?
+Hibernate: select s1_0.id, s1_0.key, s1_0.value from SimpleObject as s1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testImpliedRealtionship" classname="com.hibernate.example.mapped.ImplicitRelationshipTest" time="0.003">
+    <system-out><![CDATA[Hibernate: call next value for Email2_SEQ
+Hibernate: call next value for Email2_SEQ
+Hibernate: call next value for Message2_SEQ
+Hibernate: call next value for Message2_SEQ
+Hibernate: insert into Email2 (subject, id) values (?, ?)
+Hibernate: insert into Message2 (content, email_id, id) values (?, ?, ?)
+Hibernate: select e1_0.id, m1_0.id, m1_0.content, e1_0.subject from Email2 as e1_0 left outer join Message2 as m1_0 on e1_0.id = m1_0.email_id where e1_0.id = ?
+Email [id=1, subject=Inverse Email, message=Inverse Message]
+Message [id=1, content=Inverse Message, email=Inverse Email]
+]]></system-out>
+  </testcase>
+  <testcase name="deleteLibrary" classname="com.hibernate.example.orphan.OrphanRemovalTest" time="0.046">
+    <system-out><![CDATA[Hibernate: call next value for Library_SEQ
+Hibernate: call next value for Library_SEQ
+Hibernate: call next value for Book_SEQ
+Hibernate: call next value for Book_SEQ
+Hibernate: insert into Library (name, id) values (?, ?)
+Hibernate: insert into Book (library_id, title, id) values (?, ?, ?)
+Hibernate: insert into Book (library_id, title, id) values (?, ?, ?)
+Hibernate: insert into Book (library_id, title, id) values (?, ?, ?)
+Hibernate: select l1_0.id, l1_0.name from Library as l1_0 where l1_0.id = ?
+Hibernate: select b1_0.library_id, b1_0.id, b1_0.title from Book as b1_0 where b1_0.library_id = ?
+Hibernate: delete from Book where id=?
+Hibernate: delete from Book where id=?
+Hibernate: delete from Book where id=?
+Hibernate: delete from Library where id=?
+Hibernate: select l1_0.id, l1_0.name from Library as l1_0 where l1_0.id = ?
+Hibernate: select b1_0.id, b1_0.library_id, b1_0.title from Book as b1_0
+]]></system-out>
+  </testcase>
+  <testcase name="testOrphanRemoval" classname="com.hibernate.example.orphan.OrphanRemovalTest" time="0.016">
+    <system-out><![CDATA[Hibernate: insert into Library (name, id) values (?, ?)
+Hibernate: insert into Book (library_id, title, id) values (?, ?, ?)
+Hibernate: insert into Book (library_id, title, id) values (?, ?, ?)
+Hibernate: insert into Book (library_id, title, id) values (?, ?, ?)
+Hibernate: select l1_0.id, l1_0.name from Library as l1_0 where l1_0.id = ?
+Hibernate: select b1_0.library_id, b1_0.id, b1_0.title from Book as b1_0 where b1_0.library_id = ?
+Hibernate: delete from Book where id=?
+Hibernate: select l1_0.id, l1_0.name from Library as l1_0 where l1_0.id = ?
+Hibernate: select b1_0.library_id, b1_0.id, b1_0.title from Book as b1_0 where b1_0.library_id = ?
+Hibernate: select b1_0.id, b1_0.library_id, b1_0.title from Book as b1_0
+]]></system-out>
+  </testcase>
+</testsuite>
