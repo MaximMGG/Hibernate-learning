@@ -25,7 +25,6 @@ public class IdClassBook {
 
     public IdClassBook() {}
 
-
     static class EmbeddedISBN implements Serializable {
         int group;
         int publisher;
