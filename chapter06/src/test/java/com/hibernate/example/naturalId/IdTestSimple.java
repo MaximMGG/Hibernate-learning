@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.hibernate.example.util.SessionUtil;
 
-public class IdTestSimple {
+public class IdTestSimple extends IdTestBase{
     
 
     @Test
@@ -16,7 +16,7 @@ public class IdTestSimple {
         try (Session session = SessionUtil.getSession()) {
             Transaction tx = session.beginTransaction();
             SimpleNaturalEmployee employee = session.byId(SimpleNaturalEmployee.class)
-                                                    .load(5401);
+                                                    .load(id);
             
             Assert.assertNotNull(employee);
 
@@ -26,11 +26,4 @@ public class IdTestSimple {
             tx.commit();
         }
     }
-
-    private Employee createSimpleEmployee(String string, int i) {
-        Employee em = new Employee();
-        return em;
-    }
-
-
 }

@@ -16,5 +16,7 @@
         <property name="hbm2ddl.auto">create-drop</property>
         <mapping class="com.hibernate.example.example.Book"/>
         <mapping class="com.hibernate.example.example.Author"/>
+        <mapping class="com.hibernate.example.naturalId.SimpleNaturalEmployee"/>
+        <mapping class="com.hibernate.example.naturalId.Employee"/>
     </session-factory>
 </hibernate-configuration>

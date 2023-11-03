@@ -10,11 +10,12 @@ public class IdTestBase {
     protected SimpleNaturalEmployee createSimpleEmployee(String name, int badge) {
         SimpleNaturalEmployee employee = new SimpleNaturalEmployee();
         employee.setName(name);
-        employee.setBadge(Integer.valueOf(badge));
+        employee.setBadge(badge);
         employee.setRoyalty(10.2323);
 
         try (Session session = SessionUtil.getSession()) {
             Transaction tx = session.beginTransaction();
+
             session.save(employee);
 
             tx.commit();
