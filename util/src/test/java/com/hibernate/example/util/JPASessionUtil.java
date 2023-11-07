@@ -18,7 +18,6 @@ public class JPASessionUtil {
         persistenceUtils.putIfAbsent(persistenceUnitName, 
                     Persistence.createEntityManagerFactory(persistenceUnitName));
         
-
         return persistenceUtils.get(persistenceUnitName).createEntityManager();
     }
 
